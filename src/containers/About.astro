@@ -1,0 +1,50 @@
+---
+import LottieContainer from '@/components/LottieContainer';
+import Button from '@/components/Button.astro';
+import benefits from '@/constants/benefits.js';
+import workingV2 from '../../public/animations/workingV2.json';
+---
+
+<section
+  class="relative flex items-center justify-center w-full min-h-screen md:min-h-[80vh]"
+>
+  <div class="grid justify-center w-full grid-cols-3 gap-4 md:gap-8">
+    <div
+      class="col-span-3 bg-light max-h-[40rem] rounded-2xl flex items-center justify-evenly shadow py-4 md:py-16"
+    >
+      <LottieContainer
+        client:only="react"
+        src={workingV2}
+        className="max-w-[36rem] max-h-[36rem] hidden md:inline p-4 mx-4 md:mx-16"
+      />
+      <div
+        class="flex flex-col p-8 max-md:items-center max-md:justify-center max-md:text-center"
+      >
+        <p class="text-6xl font-cursive w-[12ch] mb-8">
+          Running your own business is
+          <span class="text-gradient"> tough enough</span>
+        </p>
+        <p class="mb-8 md:mb-16 w-[25ch] sm:w-[30ch] md:w-[40ch] md:text-xl">
+          Thats why Majic wants to provide a one stop shop for businesses who
+          need worry-free web design & development services at a fair rate.
+        </p>
+        <div>
+          <Button text="See our affordable plans" />
+        </div>
+      </div>
+    </div>
+    {
+      benefits.map((item) => (
+        <div class="flex flex-col items-center justify-center p-14 bg-light rounded-2xl h-[40rem] shadow">
+          <img src={item.icon} alt={item.alt} class="h-32 w-80 mb-14" />
+          <p class="text-5xl text-center sm:mt-4 text-text font-cursive">
+            <span class="text-gradient">{item.topText} </span>
+            <br class="max-md:hidden" />
+            <span class="whitespace-nowrap">{item.bottomText}</span>
+          </p>
+          <p class="h-24 text-xl text-center mt-14">{item.content}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>
