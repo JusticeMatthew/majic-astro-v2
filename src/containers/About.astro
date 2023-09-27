@@ -6,6 +6,7 @@ import workingV2 from '../../public/animations/workingV2.json';
 ---
 
 <section
+  id="about"
   class="relative flex items-center justify-center w-full min-h-screen md:min-h-[80vh]"
 >
   <div class="grid justify-center w-full grid-cols-3 gap-4 md:gap-8">
@@ -13,7 +14,7 @@ import workingV2 from '../../public/animations/workingV2.json';
       class="col-span-3 bg-light max-h-[40rem] rounded-2xl flex items-center justify-evenly shadow py-4 md:py-16"
     >
       <LottieContainer
-        client:only="react"
+        client:load
         src={workingV2}
         className="max-w-[36rem] max-h-[36rem] hidden md:inline p-4 mx-4 md:mx-16"
       />

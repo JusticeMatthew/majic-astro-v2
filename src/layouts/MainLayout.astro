@@ -1,9 +1,13 @@
 ---
 import { ScrollObserver } from 'astro-scroll-observer';
-import Header from '@/components/Header.astro';
+import { Lenis } from '@studio-freight/react-lenis';
+import Header from '@/components/Header.jsx';
 ---
 
-<html lang="en" class="selection:bg-blurple selection:text-dark">
+<html
+  lang="en"
+  class="selection:bg-blurple selection:text-dark motion-reduce:scroll-auto"
+>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="/favicon.ico?" />
@@ -23,9 +27,11 @@ import Header from '@/components/Header.astro';
   </head>
 
   <body>
-    <Header />
-    <div id="container">
-      <slot />
-    </div>
+    <Lenis client:load root options={{ smoothWheel: true, smoothTough: false }}>
+      <Header client:load />
+      <div id="container">
+        <slot />
+      </div>
+    </Lenis>
   </body>
 </html>
