@@ -22,6 +22,18 @@
   .text-gradient {
     @apply text-transparent bg-primary-gradient bg-clip-text;
   }
+
+  .form-container {
+    @apply mb-4 h-28;
+  }
+
+  .form-label {
+    @apply text-lg font-semibold;
+  }
+
+  .form-input {
+    @apply mt-2 w-full h-12 sm:h-14 p-3 rounded-2xl bg-slate-200 focus:outline-none;
+  }
 }
 
 body {

@@ -9,6 +9,7 @@ export default function ScrollLink({ children, to }) {
       offset={0}
       spy={true}
       smooth={true}
+      isDynamic={true}
       duration={500}
       className="py-2 px-3 font-medium text-lg bg-primary-gradient bg-bottom bg-[length:100%_0%] bg-no-repeat hover:bg-[length:100%_100%] transition-[background-size] rounded-xl hover:text-light cursor-pointer"
       alt={to}

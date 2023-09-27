@@ -1,6 +1,6 @@
 ---
 import MainLayout from '@/layouts/MainLayout.astro';
-import { Landing, About, Examples } from '@/containers';
+import { Landing, About, Examples, Services } from '@/containers';
 import ScrollingWords from '@/components/ScrollingWords';
 import BGChanger from '@/components/BGChanger';
 import '@/styles/global.css';
@@ -11,6 +11,7 @@ import '@/styles/global.css';
   <About />
   <BGChanger client:visible>
     <ScrollingWords client:visible />
-    <Examples />
+    <Examples client:idle />
+    <Services />
   </BGChanger>
 </MainLayout>

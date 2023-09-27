@@ -1,0 +1,68 @@
+---
+import services from '@/constants/services';
+import LottieContainer from '@/components/LottieContainer';
+---
+
+<section
+  id="services"
+  class="relative flex w-full h-[min(auto, 60vh)] my-16 items-center text-light max-sm:text-sm"
+>
+  <div class="flex flex-col w-full gap-8">
+    <h4 class="text-4xl tracking-wide sm:text-6xl font-cursive">
+      What we offer
+    </h4>
+    <div
+      class="flex flex-col justify-between w-auto md:w-full max-md:gap-10 md:text-lg"
+    >
+      <p class="max-w-[75ch] opacity-75">
+        You have a business to run. That’s why we go above and beyond to provide
+        the most complete digital service to our clients at an affordable price.
+        Everything you need to thrive online.
+      </p>
+      <p class="font-bold sm:mt-8">We take care of it.</p>
+      <div class="hidden grid-cols-3 gap-8 mt-16 md:grid">
+        {
+          services.map((plan) => (
+            <div
+              class={`flex flex-col justify-between h-auto py-16 shadow bg-light rounded-2xl text-dark relative ${
+                plan.recommended ? 'ring-[3px] ring-blurple' : ''
+              }`}
+            >
+              {plan.recommended && (
+                <div class="absolute left-0 flex justify-center w-full text-center -top-4 text-light">
+                  <p class="px-20 py-1 font-medium rounded-full w-fit bg-primary-gradient">
+                    Most Popular
+                  </p>
+                </div>
+              )}
+              <div>
+                <LottieContainer
+                  client:idle
+                  src={plan.lottie}
+                  className="w-[16rem] h-[16rem] mx-auto"
+                />
+                <h4 class="w-full mt-8 text-4xl text-center font-cursive">
+                  {plan.name}
+                </h4>
+                <div class="px-12 mt-8 mb-16">
+                  {plan.services.map((item) => (
+                    <div class="flex mb-6">
+                      <img src="/icons/check-icon.svg" alt="" class="w-5 h-5" />
+                      <p class="inline ml-6">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p class="w-full text-3xl text-center font-cursive">
+                  {plan.price}
+                </p>
+                <p class="w-full mt-3 text-sm text-center">{plan.monthly}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

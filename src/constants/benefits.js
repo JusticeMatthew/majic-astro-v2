@@ -1,6 +1,6 @@
 const benefits = [
   {
-    icon: '/images/web-design-icon.svg',
+    icon: '/icons/web-design-icon.svg',
     alt: 'fancy web page icon',
     topText: 'Enchanting',
     bottomText: 'web design',
@@ -8,7 +8,7 @@ const benefits = [
       'We design and develop stunning, user-friendly websites that showcase your brand and boost online growth',
   },
   {
-    icon: '/images/video-editing-icon.svg',
+    icon: '/icons/video-editing-icon.svg',
     alt: 'film icon',
     topText: 'Captivating',
     bottomText: 'video editing',
@@ -16,7 +16,7 @@ const benefits = [
       'Build trust with customers by providing them a clear and exciting video about your services',
   },
   {
-    icon: '/images/social-media-icon.svg',
+    icon: '/icons/social-media-icon.svg',
     alt: 'profile card icon',
     topText: 'Spellbinding',
     bottomText: 'social media',
