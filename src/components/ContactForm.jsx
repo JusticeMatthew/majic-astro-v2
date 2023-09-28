@@ -4,9 +4,9 @@ import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
+import Button from './Button';
 import { contactFormValidator } from '@/utils/contactFormValidator';
-import Button from './Button.astro';
-import spinner from '@/spinner.json';
+import spinner from '@/animations/spinner.json';
 
 export default function ContactForm() {
   const {
@@ -28,10 +28,10 @@ export default function ContactForm() {
         message,
       });
       await emailjs.send(
-        process.env.EMAILJS_SERVICE,
-        process.env.EMAILJS_TEMPLATE,
+        import.meta.env.PUBLIC_EMAILJS_SERVICE,
+        import.meta.env.PUBLIC_EMAILJS_TEMPLATE,
         validatedForm,
-        process.env.EMAILJS_USER,
+        import.meta.env.PUBLIC_EMAILJS_USER,
       );
       reset();
       setSending(0);
@@ -46,5 +46,116 @@ export default function ContactForm() {
     }
   };
 
-  return <form></form>;
+  return (
+    <form
+      onSubmit={handleSubmit(sendEmail)}
+      className="flex flex-col w-full text-dark"
+    >
+      <div className="flex flex-col w-full sm:gap-16 md:gap-24 sm:flex-row min-h-96">
+        <div className="w-full mt-16">
+          <div className="form-container">
+            <label htmlFor="name" className="form-label">
+              Name
+            </label>
+            <input
+              id="name"
+              type="text"
+              {...register('name')}
+              className={`form-input ${
+                errors.name
+                  ? 'focus-within:ring-4 ring-4 ring-red-700'
+                  : 'hover:ring-4 focus-within:ring-4 ring-blurple'
+              }`}
+            />
+            <p
+              className={
+                errors.name
+                  ? 'text-red-500 text-xs visible h-5 mt-2'
+                  : 'invisible'
+              }
+            >
+              We need to know your name
+            </p>
+          </div>
+          <div className="form-container">
+            <label htmlFor="email" className="form-label">
+              Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              {...register('email')}
+              className={`form-input ${
+                errors.email
+                  ? 'focus-within:ring-4 ring-4 ring-red-700'
+                  : 'hover:ring-4 focus-within:ring-4 ring-blurple'
+              }`}
+            />
+            <p
+              className={
+                errors.email
+                  ? 'text-red-500 text-xs visible h-5 mt-2'
+                  : 'invisible'
+              }
+            >
+              We need a valid email
+            </p>
+          </div>
+          <div className="form-container">
+            <label htmlFor="company" className="form-label">
+              Company
+            </label>
+            <input
+              id="company"
+              type="text"
+              {...register('company')}
+              className="form-input hover:ring-4 focus-within:ring-4 ring-blurple"
+            />
+          </div>
+        </div>
+        <div className="w-full mt-16">
+          <label htmlFor="message" className="form-label">
+            Message
+          </label>
+          <textarea
+            id="message"
+            type="textarea"
+            {...register('message')}
+            className={`form-textarea ${
+              errors.message
+                ? 'focus-within:ring-4 ring-4 ring-red-700'
+                : 'hover:ring-4 focus-within:ring-4 ring-blurple'
+            }`}
+          />
+          <p
+            className={
+              errors.message
+                ? 'text-red-500 text-xs visible h-5 mt-2'
+                : 'invisible'
+            }
+          >
+            Let us know how we can help
+          </p>
+        </div>
+      </div>
+      <div className="w-full flex justify-center mt-16">
+        <Button
+          type="submit"
+          secondary={false}
+          disabled={
+            errors.name || errors.email || errors.message ? true : false
+          }
+          contact={true}
+        >
+          {sending ? (
+            <Lottie animationData={spinner} className="w-8 h-8" />
+          ) : sending === 0 ? (
+            'Success! Message received'
+          ) : (
+            'Send'
+          )}
+        </Button>
+      </div>
+    </form>
+  );
 }

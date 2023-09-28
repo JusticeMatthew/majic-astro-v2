@@ -4,6 +4,8 @@ import Landing from '@/containers/Landing.astro';
 import About from '@/containers/About.astro';
 import Services from '@/containers/Services.astro';
 import Examples from '@/containers/Examples';
+import Contact from '@/containers/Contact.astro';
+import Footer from '@/containers/Footer.astro';
 import ScrollingWords from '@/components/ScrollingWords';
 import BGChanger from '@/components/BGChanger';
 import '@/styles/global.css';
@@ -16,5 +18,7 @@ import '@/styles/global.css';
     <ScrollingWords client:idle />
     <Examples client:idle />
     <Services />
+    <Contact />
+    <Footer />
   </BGChanger>
 </MainLayout>
