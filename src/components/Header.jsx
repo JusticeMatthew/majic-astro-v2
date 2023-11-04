@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <header
-      className={`w-full z-50 fixed h-20 backdrop-blur-lg flex items-center transition-all duration-150 ${
+      className={`w-auto sm:w-full z-50 fixed h-20 backdrop-blur-lg flex items-center transition-all duration-150 ${
         $bgIsDark ? 'bg-light/20' : 'bg-light'
       }`}
     >
@@ -21,7 +21,7 @@ export default function Header() {
             Web Design
           </h1>
         </a>
-        <nav className="flex gap-2">
+        <nav className="hidden sm:flex gap-2">
           {navLinks.map((link, idx) => (
             <ScrollLink key={idx} to={link[0]}>
               {link[1]}

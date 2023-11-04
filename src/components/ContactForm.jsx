@@ -113,7 +113,7 @@ export default function ContactForm() {
             />
           </div>
         </div>
-        <div className="w-full mt-16">
+        <div className="w-full mt-0 sm:mt-16">
           <label htmlFor="message" className="form-label">
             Message
           </label>

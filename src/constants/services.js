@@ -28,8 +28,8 @@ const pricingPlans = [
       'Secure hosting & maintenance',
       'Professional company emails',
     ],
-    price: '$2,000',
-    monthly: '+ $200 per month',
+    price: '$1,500',
+    monthly: '+ $100 per month',
     lottie: businessPlan,
   },
   {
@@ -44,8 +44,8 @@ const pricingPlans = [
       'Professional company emails',
       'Shopify e-commerce platform',
     ],
-    price: '$3,500',
-    monthly: '+ $300 per month',
+    price: '$2,000',
+    monthly: '+ $200 per month',
     lottie: commercePlan,
   },
 ];

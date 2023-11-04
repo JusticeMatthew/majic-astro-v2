@@ -7,7 +7,7 @@ const { secondary, contact } = Astro.props;
     secondary
       ? 'text-blurple font-semibold'
       : 'font-medium bg-primary-gradient text-light disabled:opacity-50 disabled:pointer-events-none'
-  } relative group tracking-wide p-1 text-lg rounded-full transition-all duration-75`}
+  } relative group tracking-wide p-1 text-md sm:text-lg rounded-full transition-all duration-75`}
   ><div
     class={`${
       secondary
@@ -18,7 +18,7 @@ const { secondary, contact } = Astro.props;
   </div>
   <span
     class={`py-3 relative z-20 block rounded-full group-hover:bg-dark transition-all duration-75 ${
-      contact ? (secondary ? 'px-8' : 'px-12') : 'px-32'
+      contact ? (secondary ? 'px-8' : 'px-12') : 'px-10'
     }`}><slot /></span
   >
 </button>

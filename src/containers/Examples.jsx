@@ -15,18 +15,18 @@ export default function Examples() {
       <p className="mb-8 font-medium tracking-wider max-sm:text-sm">
         B&C Pest Control
       </p>
-      <div className="relative flex items-start w-full md:items-center max-md:flex-col">
+      <div className="relative flex items-start w-full lg:items-center flex-col lg:flex-row">
         <video
           autoPlay
           playsInline
           loop
           muted
           poster="/images/bcpc-poster.webp"
-          className="max-h-[30rem] md:max-h-[25.4rem] rounded-2xl bg-transparent inline shadow mb-8 sm:mb-16"
+          className="max-h-[30rem] lg:max-h-[25.4rem] rounded-2xl bg-transparent inline shadow mb-8 sm:mb-16"
         >
           <source src="/videos/bcpc-example.webm" type="video/webm" />
         </video>
-        <div className="relative md:ml-24">
+        <div className="relative lg:ml-24">
           <h4 className="text-3xl sm:text-4xl font-cursive max-w-[25ch]">
             A <span className="text-gradient">striking</span> new website for
             Florida&apos;s finest pest control service

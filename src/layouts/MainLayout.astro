@@ -30,7 +30,7 @@ import Header from '@/components/Header.jsx';
   <body>
     <Lenis client:load root options={{ smoothWheel: true, smoothTough: false }}>
       <Header client:load />
-      <div id="container">
+      <div id="container" class="overflow-x-hidden">
         <slot />
       </div>
     </Lenis>
