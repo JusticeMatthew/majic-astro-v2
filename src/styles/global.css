@@ -42,7 +42,7 @@
 
 body {
   color: #0d111c;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   background-image: linear-gradient(
     to right,
     rgba(248, 250, 252, 0.6),
