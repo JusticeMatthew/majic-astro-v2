@@ -15,12 +15,16 @@ import Header from '@/components/Header.jsx';
     <meta name="generator" content={Astro.generator} />
     <meta
       name="description"
-      content="We help local business find new customers online and grow their business through stand-out websites & videos."
+      content="Majic Web Design is an affordable custom web design and development studio based in Central Florida."
+    />
+    <meta
+      name="keyword"
+      content="web design, website, development, video editing, creative, business, branding, marketing, apps"
     />
     <meta property="og:title" content="Majic Web Design" />
     <meta
       property="og:description"
-      content="We help local business find new customers online and grow their business through stand-out websites & videos."
+      content="Majic Web Design is an affordable custom web design and development studio based in Central Florida."
     />
     <meta property="og:image" content="/images/og-logo.png" />
     <title>Majic Web Design</title>
@@ -30,8 +34,10 @@ import Header from '@/components/Header.jsx';
   <body>
     <Lenis client:load root options={{ smoothWheel: true, smoothTouch: false }}>
       <Header client:load />
-      <div id="container" class="max-lg:overflow-x-hidden">
-        <slot />
+      <div class="relative">
+        <div id="container" class="max-lg:overflow-x-clip">
+          <slot />
+        </div>
       </div>
     </Lenis>
   </body>

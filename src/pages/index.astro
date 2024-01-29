@@ -1,4 +1,5 @@
 ---
+import '@/styles/global.css';
 import MainLayout from '@/layouts/MainLayout.astro';
 import Landing from '@/containers/Landing.astro';
 import About from '@/containers/About.astro';
@@ -6,9 +7,10 @@ import Services from '@/containers/Services.astro';
 import Examples from '@/containers/Examples';
 import Contact from '@/containers/Contact.astro';
 import Footer from '@/containers/Footer.astro';
+import ParallaxText from '@/components/ParallaxText';
 import ScrollingWords from '@/components/ScrollingWords';
 import BGChanger from '@/components/BGChanger';
-import '@/styles/global.css';
+import LargeCTA from '@/containers/LargeCTA.jsx';
 ---
 
 <MainLayout>
@@ -17,6 +19,7 @@ import '@/styles/global.css';
   <BGChanger client:idle>
     <ScrollingWords client:idle />
     <Examples client:idle />
+    <LargeCTA client:idle />
     <Services />
     <Contact />
     <Footer />

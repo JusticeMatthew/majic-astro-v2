@@ -7,7 +7,7 @@ import LottieContainer from '@/components/LottieContainer';
   id="services"
   class="relative flex w-full h-[min(auto, 60vh)] my-16 items-center text-light max-sm:text-sm"
 >
-  <div class="flex flex-col w-full gap-8">
+  <div class="flex flex-col w-full gap-8 mt-20">
     <h4 class="text-4xl tracking-wide sm:text-6xl font-cursive">
       What we offer
     </h4>
@@ -37,7 +37,7 @@ import LottieContainer from '@/components/LottieContainer';
               )}
               <div>
                 <LottieContainer
-                  client:only="react"
+                  client:idle
                   src={plan.lottie}
                   className="w-[16rem] h-[16rem] mx-auto"
                 />
