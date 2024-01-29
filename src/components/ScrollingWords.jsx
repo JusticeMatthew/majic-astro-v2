@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
 import ParallaxText from './ParallaxText';
 
 export default function ScrollingWords() {
