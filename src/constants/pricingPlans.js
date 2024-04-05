@@ -2,7 +2,7 @@ import personalPlan from '@/animations/personalPlan.json';
 import businessPlan from '@/animations/businessPlan.json';
 import commercePlan from '@/animations/commercePlan.json';
 
-const pricingPlans = [
+export const pricingPlans = [
   {
     name: 'Personal',
     recommended: false,
@@ -49,4 +49,3 @@ const pricingPlans = [
     lottie: commercePlan,
   },
 ];
-export default pricingPlans;
