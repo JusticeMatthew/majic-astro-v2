@@ -1,6 +1,6 @@
 ---
 import { pricingPlans } from '@/constants/pricingPlans.js';
-// import LottieContainer from '@/components/LottieContainer.jsx';
+import LottieContainer from '@/components/LottieContainer.jsx';
 ---
 
 <section
@@ -36,11 +36,11 @@ import { pricingPlans } from '@/constants/pricingPlans.js';
                 </div>
               )}
               <div>
-                {/* <LottieContainer
-                  client:idle
+                <LottieContainer
+                  client:only="react"
                   src={plan.lottie}
                   className="w-[16rem] h-[16rem] mx-auto"
-              />*/}
+                />
                 <h4 class="w-full mt-8 text-4xl text-center font-cursive">
                   {plan.name}
                 </h4>
