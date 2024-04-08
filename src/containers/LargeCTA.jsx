@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import Button from '@/components/Button.jsx';
 
 export default function LargeCTA() {

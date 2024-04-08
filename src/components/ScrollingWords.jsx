@@ -12,3 +12,5 @@ export default function ScrollingWords() {
     </div>
   );
 }
+
+// combine this and parallax text into one component and rename PT to wrapper

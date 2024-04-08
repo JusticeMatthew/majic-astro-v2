@@ -43,11 +43,11 @@ export default function ParallaxText({
         style={{ x }}
         className="uppercase flex whitespace-nowrap flex-nowrap"
       >
-        <span className="block mr-8 text-gradient">{children}</span>
-        <span className="block mr-8 text-gradient">{children}</span>
-        <span className="block mr-8 text-gradient">{children}</span>
-        <span className="block mr-8 text-gradient">{children}</span>
-        <span className="block mr-8 text-gradient">{children}</span>
+        <span className="block mr-8 text-gradient-parallax">{children}</span>
+        <span className="block mr-8 text-gradient-parallax">{children}</span>
+        <span className="block mr-8 text-gradient-parallax">{children}</span>
+        <span className="block mr-8 text-gradient-parallax">{children}</span>
+        <span className="block mr-8 text-gradient-parallax">{children}</span>
       </motion.p>
     </div>
   );
