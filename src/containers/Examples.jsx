@@ -15,18 +15,18 @@ export default function Examples() {
       <p className="mb-8 font-medium tracking-wider max-sm:text-sm">
         B&C Pest Control
       </p>
-      <div className="relative flex items-start w-full lg:items-center flex-col lg:flex-row">
+      <div className="relative flex items-start w-full tablet:items-center flex-col tablet:flex-row">
         <video
           autoPlay
           playsInline
           loop
           muted
           poster="/images/bcpc-poster.webp"
-          className="max-h-[30rem] lg:max-h-[25.4rem] rounded-2xl bg-transparent inline shadow mb-8 sm:mb-16"
+          className="max-h-[30rem] tablet:max-h-[25.4rem] rounded-2xl bg-transparent inline shadow mb-8 sm:mb-16"
         >
           <source src="/videos/bcpc-example.webm" type="video/webm" />
         </video>
-        <div className="relative lg:ml-24">
+        <div className="relative tablet:ml-24">
           <h4 className="text-3xl sm:text-4xl font-cursive max-w-[25ch]">
             A <span className="text-gradient">striking</span> new website for
             Florida&apos;s finest pest control service
@@ -34,7 +34,7 @@ export default function Examples() {
           <span className="absolute translate-y-10 -translate-x-10 text-[8rem] leading-none font-cursive text-gradient opacity-20">
             &quot;
           </span>
-          <p className="mt-16 text-sm opacity-75 sm:text-lg max-w-[75ch]">
+          <p className="mt-16 text-sm opacity-75 sm:text-tablet max-w-[75ch]">
             Majic created the website for our company B&C Pest Control. We told
             them we wanted something simple and informative and they delivered
             better than we expected. We would highly recommend Majic for website
@@ -42,7 +42,7 @@ export default function Examples() {
             eye and affordable pricing.
           </p>
           <div className="flex items-end justify-between w-full mt-8 mb-16">
-            <p className="text-lg">
+            <p className="text-tablet">
               Garry & JJ Reese
               <span className="block text-sm opacity-75">Owners</span>
             </p>

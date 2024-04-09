@@ -6,6 +6,9 @@ module.exports = {
   important: true,
   theme: {
     extend: {
+      screens: {
+        tablet: '1025px',
+      },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         cursive: ['Calistoga', ...defaultTheme.fontFamily.serif],

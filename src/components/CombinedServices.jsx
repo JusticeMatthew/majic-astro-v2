@@ -10,7 +10,7 @@ export default function CombinedServices() {
   return (
     <motion.div
       layout
-      className="flex flex-col items-center mt-20 sm:mt-32 text-dark sm-md:hidden"
+      className="flex flex-col items-center mt-20 sm:mt-32 text-dark tablet:hidden"
     >
       <motion.div
         layout
@@ -49,7 +49,7 @@ export default function CombinedServices() {
           <div>
             <Lottie
               animationData={activePlan.lottie}
-              className="w-[16rem] h-[16rem] mx-auto"
+              className="max-[780px]:w-[16rem] max-[780px]:h-[16rem] w-[20rem] h-[20rem] mx-auto"
             />
             <h4 className="w-full mt-8 text-4xl text-center font-cursive sm:hidden">
               {activePlan.name}
