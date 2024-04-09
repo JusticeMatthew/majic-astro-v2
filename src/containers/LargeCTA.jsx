@@ -2,7 +2,7 @@ import Button from '@/components/Button.jsx';
 
 export default function LargeCTA() {
   return (
-    <section className="h-[80vh] flex justify-center flex-col gap-20 group/stars">
+    <section className="md:flex h-[80vh] hidden justify-center flex-col gap-20 group/stars">
       <div className="absolute w-screen bg-[#20204E] left-0 h-[80vh] overflow-y-clip"></div>
       <h2 className="z-10 text-8xl font-bold text-light/80 leading-[1.15]">
         Let's cast a spell of{' '}

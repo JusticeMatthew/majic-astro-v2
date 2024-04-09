@@ -1,6 +1,7 @@
 ---
 import { pricingPlans } from '@/constants/pricingPlans.js';
 import LottieContainer from '@/components/LottieContainer.jsx';
+import CombinedServices from '@/components/CombinedServices';
 ---
 
 <section
@@ -20,7 +21,8 @@ import LottieContainer from '@/components/LottieContainer.jsx';
         Everything you need to thrive online.
       </p>
       <p class="font-bold sm:mt-8">We take care of it.</p>
-      <div class="hidden grid-cols-3 gap-8 mt-16 md:grid">
+      <CombinedServices client:idle/>
+      <div class="hidden grid-cols-3 gap-8 mt-16 lg:grid">
         {
           pricingPlans.map((plan) => (
             <div
