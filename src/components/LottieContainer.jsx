@@ -1,5 +1,7 @@
-import Lottie from 'lottie-react';
+import { useLottie } from 'lottie-react';
 
 export default function LottieContainer({ src, className }) {
-  return <Lottie animationData={src} className={className} />;
+  const { View } = useLottie({ animationData: src });
+
+  return <div className={className}>{View}</div>;
 }
