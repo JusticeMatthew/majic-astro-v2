@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Lottie from 'lottie-react';
+import { useLottie } from 'lottie-react';
 import { pricingPlans } from '@/constants/pricingPlans.js';
 
 export default function CombinedServices() {
   const [personal, business, commerce] = pricingPlans;
   const [activePlan, setActivePlan] = useState(business);
+
+  const { View } = useLottie({ animationData: activePlan.lottie });
 
   return (
     <motion.div
@@ -50,10 +52,9 @@ export default function CombinedServices() {
         )}
         <div className="sm:flex sm:flex-row sm:mx-auto sm:mt-16">
           <div>
-            {/* <Lottie
-              animationData={activePlan.lottie}
-              className="max-[780px]:w-[16rem] max-[780px]:h-[16rem] w-[20rem] h-[20rem] mx-auto"
-            /> */}
+            <div className="max-[780px]:w-[16rem] max-[780px]:h-[16rem] w-[20rem] h-[20rem] mx-auto">
+              {View}
+            </div>
             <h4 className="w-full mt-8 text-4xl text-center font-cursive sm:hidden">
               {activePlan.name}
             </h4>
