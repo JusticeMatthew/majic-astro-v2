@@ -14,12 +14,12 @@ import workingV2 from '@/animations/workingV2.json';
       class="col-span-3 bg-light max-h-[40rem] rounded-2xl flex items-center justify-evenly shadow py-4 md:py-16"
     >
       <LottieContainer
-        client:only="react"
+        client:idle
         src={workingV2}
-        className="max-w-[36rem] max-h-[36rem] hidden lg:inline p-4 mx-4 md:mx-16"
+        className="max-w-[36rem] max-h-[36rem] hidden tablet:inline p-4 mx-4 md:mx-16"
       />
       <div
-        class="flex flex-col p-8 max-md:items-center max-lg:justify-center max-lg:text-center"
+        class="flex flex-col p-8 max-md:items-center max-tablet:justify-center max-tablet:text-center"
       >
         <p class="text-4xl md:text-6xl font-cursive w-[12ch] mb-8">
           Running your own business is
@@ -35,20 +35,20 @@ import workingV2 from '@/animations/workingV2.json';
       </div>
     </div>
     {
-      benefits.map((item) => (
-        <div class="flex lg:flex-col max-lg:col-span-3 items-center justify-center p-14 bg-light rounded-2xl h-[24rem] lg:h-[40rem] shadow gap-10">
+      benefits.map(({ icon, alt, topText, bottomText, content }) => (
+        <div class="flex tablet:flex-col max-tablet:col-span-3 items-center justify-center p-14 bg-light rounded-2xl h-[24rem] tablet:h-[40rem] shadow gap-10">
           <img
-            src={item.icon}
-            alt={item.alt}
-            class="h-32 lg:mb-8 max-sm:hidden"
+            src={icon}
+            alt={alt}
+            class="h-32 tablet:mb-8 max-sm:hidden"
           />
           <div>
             <p class="text-5xl text-center text-text font-cursive">
-              <span class="text-gradient">{item.topText}</span>
+              <span class="text-gradient">{topText}</span>
               <br />
-              <span class="whitespace-nowrap">{item.bottomText}</span>
+              <span class="whitespace-nowrap">{bottomText}</span>
             </p>
-            <p class="text-xl text-center mt-8">{item.content}</p>
+            <p class="text-xl text-center mt-8">{content}</p>
           </div>
         </div>
       ))

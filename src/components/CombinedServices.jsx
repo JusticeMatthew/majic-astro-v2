@@ -9,6 +9,18 @@ export default function CombinedServices() {
 
   const { View } = useLottie({ animationData: activePlan.lottie });
 
+  const handleTabChange = (tabName) => {
+    if (tabName === 'Personal') {
+      setActivePlan(personal);
+    }
+    if (tabName === 'Business') {
+      setActivePlan(business);
+    }
+    if (tabName === 'Commerce') {
+      setActivePlan(commerce);
+    }
+  };
+
   return (
     <motion.div
       layout
@@ -31,10 +43,7 @@ export default function CombinedServices() {
               } ${activePlan === personal ? 'rounded-tl-2xl' : ''} ${
                 activePlan === commerce ? 'rounded-tr-2xl' : ''
               }`}
-              onClick={() => {
-                const t = tabName.toLowerCase();
-                setActivePlan(t);
-              }}
+              onClick={() => handleTabChange(tabName)}
             >
               {tabName}
             </motion.div>
