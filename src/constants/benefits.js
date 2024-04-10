@@ -1,7 +1,7 @@
 const benefits = [
   {
     icon: '/icons/web-design-icon.svg',
-    alt: 'fancy web page icon',
+    alt: 'web page icon',
     topText: 'Enchanting',
     bottomText: 'web design',
     content:
