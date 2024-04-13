@@ -14,7 +14,7 @@ export default function Header() {
     >
       <div id="container" className="flex items-center justify-between">
         <a href="/" className="flex gap-2 cursor-pointer items-center">
-          <img src="/images/logo-svg.svg" className="w-14 h-14" />
+          <img src="/images/logo-svg.svg" alt="" className="w-14 h-14" />
           <h1 className="md:text-2xl text-lg font-cursive">
             Majic
             <br />

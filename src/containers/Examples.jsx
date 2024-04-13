@@ -27,14 +27,14 @@ export default function Examples() {
           <source src="/videos/bcpc-example.webm" type="video/webm" />
         </video>
         <div className="relative tablet:ml-24">
-          <h4 className="text-3xl sm:text-4xl font-cursive max-w-[25ch]">
+          <p className="text-3xl sm:text-4xl font-cursive max-w-[25ch]">
             A <span className="text-gradient">striking</span> new website for
             Florida&apos;s finest pest control service
-          </h4>
-          <span className="absolute translate-y-10 -translate-x-10 text-[8rem] leading-none font-cursive text-gradient opacity-20">
+          </p>
+          <span className="absolute translate-y-2 -translate-x-10 text-[8rem] leading-none font-cursive text-gradient opacity-20">
             &quot;
           </span>
-          <p className="mt-16 text-sm opacity-75 sm:text-tablet max-w-[75ch]">
+          <p className="mt-8 text-sm opacity-75 sm:text-tablet max-w-[75ch]">
             Majic created the website for our company B&C Pest Control. We told
             them we wanted something simple and informative and they delivered
             better than we expected. We would highly recommend Majic for website
