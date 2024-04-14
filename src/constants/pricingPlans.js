@@ -1,7 +1,3 @@
-import personalPlan from '@/animations/personalPlan.json';
-import businessPlan from '@/animations/businessPlan.json';
-import commercePlan from '@/animations/commercePlan.json';
-
 export const pricingPlans = [
   {
     name: 'Personal',
@@ -15,7 +11,7 @@ export const pricingPlans = [
     ],
     price: '$1,000',
     monthly: '+ $0 per month',
-    lottie: personalPlan,
+    lottie: 'animations/personalPlan.json',
   },
   {
     name: 'Business',
@@ -30,7 +26,7 @@ export const pricingPlans = [
     ],
     price: '$1,500',
     monthly: '+ $100 per month',
-    lottie: businessPlan,
+    lottie: 'animations/businessPlan.json',
   },
   {
     name: 'Commerce',
@@ -46,6 +42,6 @@ export const pricingPlans = [
     ],
     price: '$2,000',
     monthly: '+ $200 per month',
-    lottie: commercePlan,
+    lottie: 'animations/commercePlan.json',
   },
 ];

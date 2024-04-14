@@ -1,7 +1,7 @@
 ---
 import { pricingPlans } from '@/constants/pricingPlans.js';
-import LottieContainer from '@/components/LottieContainer.jsx';
-import CombinedServices from '@/components/CombinedServices.jsx';
+import CombinedServices from '@/components/CombinedServices';
+import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
 ---
 
 <section
@@ -21,7 +21,7 @@ import CombinedServices from '@/components/CombinedServices.jsx';
         Everything you need to thrive online.
       </p>
       <p class="font-bold sm:mt-8">We take care of it.</p>
-      <CombinedServices client:only="react" />
+      <CombinedServices client:idle />
       <div class="hidden grid-cols-3 gap-8 mt-16 tablet:grid">
         {
           pricingPlans.map((plan) => (
@@ -38,11 +38,13 @@ import CombinedServices from '@/components/CombinedServices.jsx';
                 </div>
               )}
               <div>
-                <LottieContainer
-                  client:only="react"
-                  src={plan.lottie}
-                  className="w-[16rem] h-[16rem] mx-auto"
-                />
+                <div class="w-[16rem] h-[16rem] mx-auto">
+                  <LottieAnimation
+                    src={plan.lottie}
+                    autoplay={true}
+                    player="light"
+                  />
+                </div>
                 <p class="w-full mt-8 text-4xl text-center font-cursive">
                   {plan.name}
                 </p>

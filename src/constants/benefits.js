@@ -6,6 +6,7 @@ const benefits = [
     bottomText: 'web design',
     content:
       'We design and develop stunning, user-friendly websites that showcase your brand and boost online growth',
+    timing: 0,
   },
   {
     icon: '/icons/video-editing-icon.svg',
@@ -14,6 +15,7 @@ const benefits = [
     bottomText: 'video editing',
     content:
       'Build trust with customers by providing them a clear and exciting video about your services',
+    timing: 0.6,
   },
   {
     icon: '/icons/social-media-icon.svg',
@@ -22,6 +24,7 @@ const benefits = [
     bottomText: 'social media',
     content:
       'Our social media services keep your customers informed and up to date about specials, offers, and more',
+    timing: 1.2,
   },
 ];
 

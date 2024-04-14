@@ -31,7 +31,7 @@ export default function Examples() {
             A <span className="text-gradient">striking</span> new website for
             Florida&apos;s finest pest control service
           </p>
-          <span className="absolute translate-y-2 -translate-x-10 text-[8rem] leading-none font-cursive text-gradient opacity-20">
+          <span className="absolute translate-y-2 -translate-x-10 text-[8rem] leading-none font-cursive text-gradient opacity-10">
             &quot;
           </span>
           <p className="mt-8 text-sm opacity-75 sm:text-tablet max-w-[75ch]">

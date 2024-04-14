@@ -1,12 +1,10 @@
 import { useState } from 'react';
-import Lottie from 'lottie-react';
 import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Button from './Button';
 import { contactFormValidator } from '@/utils/contactFormValidator';
-import spinner from '@/animations/spinner.json';
 
 export default function ContactForm() {
   const {
@@ -148,7 +146,10 @@ export default function ContactForm() {
           contact={true}
         >
           {sending ? (
-            <Lottie animationData={spinner} className="w-8 h-8" />
+            <div
+              data-animation-path="animations/spinner.json"
+              className="lottie w-8 h-8"
+            />
           ) : sending === 0 ? (
             'Success! Message received'
           ) : (

@@ -1,8 +1,8 @@
 ---
-import LottieContainer from '@/components/LottieContainer';
 import Button from '@/components/Button.astro';
 import benefits from '@/constants/benefits.js';
-import workingV2 from '@/animations/workingV2.json';
+import BenefitCards from '@/components/BenefitCards.jsx';
+import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
 ---
 
 <section
@@ -13,11 +13,15 @@ import workingV2 from '@/animations/workingV2.json';
     <div
       class="col-span-3 bg-light max-h-[40rem] rounded-2xl flex items-center justify-evenly shadow py-4 md:py-16"
     >
-      <LottieContainer
-        client:only="react"
-        src={workingV2}
-        className="max-w-[36rem] max-h-[36rem] hidden tablet:inline p-4 mx-4 md:mx-16"
-      />
+      <div
+        class="w-[36rem] h-[36rem] hidden tablet:inline p-4 mx-4 md:mx-16 place-content-center"
+      >
+        <LottieAnimation
+          src="animations/workingV2.json"
+          autoplay={true}
+          player="light"
+        />
+      </div>
       <div
         class="flex flex-col p-8 max-md:items-center max-tablet:justify-center max-tablet:text-center"
       >
@@ -34,9 +38,10 @@ import workingV2 from '@/animations/workingV2.json';
         </div>
       </div>
     </div>
+    <BenefitCards client:idle />
     {
       benefits.map(({ icon, alt, topText, bottomText, content }) => (
-        <div class="flex tablet:flex-col max-tablet:col-span-3 items-center justify-center p-14 bg-light rounded-2xl h-[24rem] tablet:h-[40rem] shadow gap-10">
+        <div class="flex tablet:hidden flex-row col-span-3 items-center justify-center p-14 bg-light rounded-2xl h-auto  shadow gap-10">
           <img src={icon} alt={alt} class="h-32 tablet:mb-8 max-sm:hidden" />
           <div>
             <p class="text-5xl text-center text-text font-cursive">
@@ -44,7 +49,7 @@ import workingV2 from '@/animations/workingV2.json';
               <br />
               <span class="whitespace-nowrap">{bottomText}</span>
             </p>
-            <p class="text-xl text-center mt-8">{content}</p>
+            <p class="text-xl text-center mt-8 max-w-[40ch]">{content}</p>
           </div>
         </div>
       ))

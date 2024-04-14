@@ -27,7 +27,7 @@ import LargeHoverLogo from '@/components/LargeHoverLogo';
         business! Reach out today and we’ll respond within 48 hours.
       </p>
     </div>
-    <ContactForm client:only="react" />
+    <ContactForm client:idle />
   </div>
   <div class="flex flex-col items-center mt-4 sm:flex-row">
     <p class="text-center text-light text-md">
@@ -35,7 +35,7 @@ import LargeHoverLogo from '@/components/LargeHoverLogo';
         href="https://calendly.com/majicwebdesign/meeting"
         target="_blank"
         class="inline font-medium text-blurple hover:opacity-75"
-        >Schedule a video call</a
+        ><br class="sm:hidden block" />Schedule a video call</a
       >
     </p>
   </div>
