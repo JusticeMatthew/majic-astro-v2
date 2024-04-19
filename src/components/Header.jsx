@@ -2,13 +2,14 @@ import { useStore } from '@nanostores/react';
 import { bgIsDark } from '@/store/darkBg';
 import ScrollLink from './ScrollLink';
 import navLinks from '@/constants/navLinks';
+import MobileNav from './MobileNav';
 
 export default function Header() {
   const $bgIsDark = useStore(bgIsDark);
 
   return (
     <header
-      className={`w-auto sm:w-full z-50 fixed h-20 backdrop-blur-lg flex items-center transition-all duration-150 ${
+      className={`w-full z-50 fixed h-20 backdrop-blur-lg flex items-center transition-all duration-150 ${
         $bgIsDark ? 'bg-light/20' : 'bg-light'
       }`}
     >
@@ -21,6 +22,7 @@ export default function Header() {
             Web Design
           </h1>
         </a>
+        <MobileNav />
         <nav className="hidden sm:flex gap-2">
           {navLinks.map((link, idx) => (
             <ScrollLink key={idx} to={link[0]}>
