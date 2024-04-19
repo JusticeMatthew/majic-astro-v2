@@ -2,7 +2,6 @@ import React from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { Link } from 'react-scroll';
 import navLinks from '@/constants/navLinks.js';
-import ScrollLink from './ScrollLink.jsx';
 
 export default function MobileNav() {
   return (
