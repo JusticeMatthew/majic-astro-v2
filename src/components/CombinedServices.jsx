@@ -1,4 +1,4 @@
-import { useState, Suspense } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { pricingPlans } from '@/constants/pricingPlans.js';
 
@@ -58,13 +58,6 @@ export default function CombinedServices() {
         )}
         <div className="sm:flex sm:flex-row sm:mx-auto sm:mt-16">
           <div>
-            <Suspense fallback={<></>}>
-              <div
-                data-animation-path={activePlan.lottie}
-                data-anim-loop="true"
-                className="lottie max-[780px]:w-[16rem] max-[780px]:h-[16rem] w-[20rem] h-[20rem] mx-auto"
-              />
-            </Suspense>
             <h4 className="w-full mt-8 text-4xl text-center font-cursive sm:hidden">
               {activePlan.name}
             </h4>
