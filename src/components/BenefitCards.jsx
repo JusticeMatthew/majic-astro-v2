@@ -8,8 +8,8 @@ export default function BenefitCards() {
         <motion.div
           key={topText}
           initial={{ rotateY: -180 }}
-          whileInView={{ rotateY: 0 }}
-          transition={{ duration: 1, delay: timing }}
+          whileInView={{ rotateY: 0, scale: [1, 1.05, 1] }}
+          transition={{ duration: 1.3, delay: timing }}
           viewport={{ once: true }}
           className="p-14 bg-light rounded-2xl max-tablet:hidden h-auto shadow gap-10 benefit-card relative"
         >
