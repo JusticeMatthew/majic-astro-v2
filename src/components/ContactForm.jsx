@@ -150,7 +150,7 @@ export default function ContactForm() {
               data-animation-path="animations/spinner.json"
               className="lottie w-8 h-8"
             />
-          ) : sending === 0 ? (
+          ) : sending ? (
             'Success! Message received'
           ) : (
             'Send'

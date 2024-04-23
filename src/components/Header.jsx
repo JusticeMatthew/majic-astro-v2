@@ -24,8 +24,8 @@ export default function Header() {
         </a>
         <MobileNav />
         <nav className="hidden sm:flex gap-2">
-          {navLinks.map((link, idx) => (
-            <ScrollLink key={idx} to={link[0]}>
+          {navLinks.map((link) => (
+            <ScrollLink key={link[0]} to={link[0]}>
               {link[1]}
             </ScrollLink>
           ))}
