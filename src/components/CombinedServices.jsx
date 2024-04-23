@@ -31,10 +31,10 @@ export default function CombinedServices() {
           layout
           className="absolute flex items-center w-full h-20 text-lg text-center -top-20 bg-light/60 rounded-t-2xl"
         >
-          {['Personal', 'Business', 'Commerce'].map((tabName, i) => (
+          {['Personal', 'Business', 'Commerce'].map((tabName) => (
             <motion.div
               layout
-              key={i}
+              key={tabName}
               className={`w-1/3 flex items-center justify-center h-full ${
                 activePlan.name === tabName ? 'bg-light font-semibold' : ''
               } ${activePlan === personal ? 'rounded-tl-2xl' : ''} ${

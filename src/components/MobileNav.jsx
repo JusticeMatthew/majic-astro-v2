@@ -36,11 +36,11 @@ export default function MobileNav() {
               leaveTo="transform opacity-0 scale-95"
             >
               <Menu.Items className="absolute right-0 w-40 p-4 shadow bg-light rounded-2xl">
-                {navLinks.map((link, idx) => (
-                  <Menu.Item key={idx}>
+                {navLinks.map((link) => (
+                  <Menu.Item key={link[0]}>
                     {({ active, close }) => (
                       <div
-                        onClick={close}
+                        onTouchStart={close}
                         className={`${
                           active ? 'bg-primary-gradient' : ''
                         } text-xl font-semibold rounded-2xl py-2 px-3`}
