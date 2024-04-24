@@ -39,11 +39,7 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
               )}
               <div>
                 <div class="w-[16rem] h-[16rem] mx-auto">
-                  <LottieAnimation
-                    src={plan.lottie}
-                    autoplay={true}
-                    player="light"
-                  />
+                  <LottieAnimation src={plan.lottie} autoplay="visible" />
                 </div>
                 <p class="w-full mt-8 text-4xl text-center font-cursive">
                   {plan.name}
