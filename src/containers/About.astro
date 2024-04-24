@@ -42,7 +42,13 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
     {
       benefits.map(({ icon, alt, topText, bottomText, content }) => (
         <div class="flex tablet:hidden flex-row col-span-3 items-center justify-center p-14 bg-light rounded-2xl h-auto  shadow gap-10">
-          <img src={icon} alt={alt} class="h-32 tablet:mb-8 max-sm:hidden" />
+          <img
+            src={icon}
+            alt={alt}
+            height={32}
+            width={null}
+            class="tablet:mb-8 max-sm:hidden"
+          />
           <div>
             <p class="text-5xl text-center text-text font-cursive">
               <span class="text-gradient">{topText}</span>

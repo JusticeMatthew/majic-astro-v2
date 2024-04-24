@@ -56,7 +56,9 @@ export default function Examples() {
               <img
                 src="/icons/right-arrow-icon.svg"
                 alt=""
-                className="mb-6 ml-2 w-[10px] h-[10px] translate-y-1"
+                width={10}
+                height={10}
+                className="mb-6 ml-2 translate-y-1"
               />
             </a>
           </div>

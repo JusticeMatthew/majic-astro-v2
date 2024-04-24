@@ -65,7 +65,12 @@ export default function CombinedServices() {
           <div className="px-8 mt-8 mb-16 sm:px-12">
             {activePlan.services.map((service) => (
               <div key={service} className="flex mb-6">
-                <img src="/icons/check-icon.svg" alt="" className="w-5 h-5" />
+                <img
+                  src="/icons/check-icon.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                />
                 <p className="inline ml-6">{service}</p>
               </div>
             ))}

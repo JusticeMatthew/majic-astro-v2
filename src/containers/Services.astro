@@ -51,7 +51,12 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
                 <div class="px-12 mt-8 mb-16">
                   {plan.services.map((item) => (
                     <div class="flex mb-6">
-                      <img src="/icons/check-icon.svg" alt="" class="w-5 h-5" />
+                      <img
+                        src="/icons/check-icon.svg"
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
                       <p class="inline ml-6">{item}</p>
                     </div>
                   ))}

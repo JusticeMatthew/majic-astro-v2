@@ -14,7 +14,9 @@ export default function LargeHoverLogo({ duration, className }) {
           repeat: Infinity,
         },
       }}
-      className={`w-80 h-80 opacity-20 absolute pointer-events-none ${className}`}
+      width={320}
+      height={320}
+      className={`opacity-20 absolute pointer-events-none ${className}`}
     />
   );
 }

@@ -14,7 +14,8 @@ export default function MobileNav() {
                 <img
                   src="icons/close-icon.svg"
                   alt="navigation menu"
-                  className="h-10 w-10"
+                  width={40}
+                  height={40}
                 />
               </Menu.Button>
             ) : (
@@ -22,7 +23,8 @@ export default function MobileNav() {
                 <img
                   src="icons/burger-menu.svg"
                   alt="navigation menu"
-                  className="h-10 w-10"
+                  width={40}
+                  height={40}
                 />
               </Menu.Button>
             )}
