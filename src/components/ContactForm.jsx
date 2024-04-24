@@ -141,9 +141,7 @@ export default function ContactForm() {
         <Button
           type="submit"
           secondary={false}
-          disabled={
-            errors.name || errors.email || errors.message ? true : false
-          }
+          disabled={errors.name || errors.email || (errors.message && false)}
           contact={true}
         >
           {sending ? (
