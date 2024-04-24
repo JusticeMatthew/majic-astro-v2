@@ -1,7 +1,7 @@
 ---
 import Button from '@/components/Button.astro';
 import benefits from '@/constants/benefits.js';
-import BenefitCards from '@/components/BenefitCards.jsx';
+import BenefitCard from '@/components/BenefitCard.jsx';
 import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
 ---
 
@@ -38,7 +38,7 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
         </div>
       </div>
     </div>
-    <BenefitCards client:idle />
+    <BenefitCard client:idle />
     {
       benefits.map(({ icon, alt, topText, bottomText, content }) => (
         <div class="flex tablet:hidden flex-row col-span-3 items-center justify-center p-14 bg-light rounded-2xl h-auto  shadow gap-10">

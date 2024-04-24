@@ -46,6 +46,10 @@ export default function CombinedServices() {
             </motion.div>
           ))}
         </motion.div>
+        <div
+          data-animation-path="animations/businessPlan.json"
+          className="lottie w-[16] h-[16]"
+        />
         <h4 className="w-full text-4xl text-center font-cursive hidden sm:block">
           {activePlan.name}
         </h4>

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import benefits from '@/constants/benefits.js';
 
-export default function BenefitCards() {
+export default function BenefitCard() {
   return (
     <>
       {benefits.map(({ icon, alt, topText, bottomText, content, timing }) => (

@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import Button from './Button';
+import Button from './Button.jsx';
 import { contactFormValidator } from '@/utils/contactFormValidator';
 
 export default function ContactForm() {
@@ -34,6 +34,7 @@ export default function ContactForm() {
       reset();
       setSending(0);
       setTimeout(() => setSending(false), 4000);
+      console.log(sending);
     } catch (error) {
       if (error instanceof z.ZodError) {
         setSending(false);
