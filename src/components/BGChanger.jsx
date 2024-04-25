@@ -24,13 +24,8 @@ export default function BGChanger({ children }) {
 
     if (inView) {
       bgIsDark.set(false);
-      body.style.backgroundColor = '#0B112B';
-      body.style.backgroundImage = `url("/images/dark-bg-texture.svg")`;
-      body.style.backgroundImage = `linear-gradient(
-        to left,
-        rgba(115, 92, 221, 0.2),
-        rgba(27, 82, 153, 0.4)
-      )`;
+      body.style.backgroundColor = '#20204E';
+      body.style.backgroundImage = 'none';
     }
   }, [inView]);
 
