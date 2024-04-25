@@ -2,6 +2,7 @@
 import '@/styles/global.css';
 import { ScrollObserver } from 'astro-scroll-observer';
 import { Lenis } from '@studio-freight/react-lenis';
+import { AstroFont } from 'astro-font';
 import Header from '@/components/Header.jsx';
 ---
 
@@ -30,6 +31,24 @@ import Header from '@/components/Header.jsx';
     <meta property="og:image" content="/images/og-logo.png" />
     <title>Majic Web Design</title>
     <ScrollObserver />
+    <AstroFont
+      config={[
+        {
+          name: 'Calistoga',
+          src: [
+            {
+              style: 'normal',
+              weight: '400',
+              path: 'fonts/Calistoga.woff2',
+            },
+          ],
+          preload: true,
+          display: 'swap',
+          selector: '.astro-font-test',
+          fallback: 'serif',
+        },
+      ]}
+    />
   </head>
 
   <body>
