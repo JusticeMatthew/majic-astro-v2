@@ -23,11 +23,8 @@ export default function LargeCTA() {
           </Canvas>
         </div>
       </div>
-      <h2 className="z-10 text-8xl font-bold text-light/90 leading-[1.15] relative drop-shadow-xl">
-        Let's cast a spell of{' '}
-        <span className="relative after:absolute after:bottom-0 after:left-0 after:bg-primary-gradient after:w-[24.6rem] after:h-2 after:rounded-full">
-          success
-        </span>{' '}
+      <h2 className="z-10 text-8xl font-cursive font-bold text-light/90 leading-tight tracking-wider relative drop-shadow-xl">
+        Let's cast a spell of <span className="large-cta-text">success</span>{' '}
         for your online endeavors
       </h2>
       <div>

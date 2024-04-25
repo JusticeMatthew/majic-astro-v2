@@ -85,3 +85,23 @@ html[data-is-top='false'] header {
 .benefit-card img div p span {
   transform-style: preserve-3d;
 }
+
+.large-cta-text {
+  background: linear-gradient(90deg, #735cdd, #00a7e1, #f7b2b7, #735cdd) 0 0 /
+    500% 100%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .large-cta-text {
+    animation: move-bg 8s linear infinite;
+  }
+
+  @keyframes move-bg {
+    to {
+      background-position: 500% 0;
+    }
+  }
+}
