@@ -23,7 +23,7 @@ export default function LargeCTA() {
           </Canvas>
         </div>
       </div>
-      <h2 className="z-10 text-8xl font-cursive font-bold text-light/90 relative drop-shadow-xl">
+      <h2 className="z-10 text-8xl font-cursive text-light/90 relative drop-shadow-xl">
         Let's cast a spell of <span className="large-cta-text">success</span>{' '}
         for your online endeavors
       </h2>
