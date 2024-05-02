@@ -15,6 +15,7 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm({ resolver: zodResolver(contactFormValidator) });
   const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
 
   const sendEmail = async ({ name, email, company, message }) => {
     try {
@@ -32,15 +33,17 @@ export default function ContactForm() {
         import.meta.env.PUBLIC_EMAILJS_USER,
       );
       reset();
-      setSending(0);
-      setTimeout(() => setSending(false), 4000);
-      console.log(sending);
+      setSending(false);
+      setSent(true);
+      setTimeout(() => setSent(false), 4000);
     } catch (error) {
       if (error instanceof z.ZodError) {
         setSending(false);
         setError('name', { message: error.message });
         setError('email', { message: error.message });
         setError('message', { message: error.message });
+      } else {
+        console.log(error);
       }
     }
   };
@@ -141,19 +144,10 @@ export default function ContactForm() {
         <Button
           type="submit"
           secondary={false}
-          disabled={errors.name || errors.email || (errors.message && false)}
+          disabled={errors.name || errors.email || errors.message}
           contact={true}
         >
-          {sending ? (
-            <div
-              data-animation-path="animations/spinner.json"
-              className="lottie w-8 h-8"
-            />
-          ) : sending ? (
-            'Success! Message received'
-          ) : (
-            'Send'
-          )}
+          Send
         </Button>
       </div>
     </form>

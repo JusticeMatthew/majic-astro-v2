@@ -16,11 +16,7 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
       <div
         class="w-[36rem] h-[36rem] hidden tablet:inline p-4 mx-4 md:mx-16 place-content-center"
       >
-        <LottieAnimation
-          src="animations/workingV2.json"
-          autoplay={true}
-          player="light"
-        />
+        <LottieAnimation src="animations/workingV2.json" autoplay="visible" />
       </div>
       <div
         class="flex flex-col p-8 max-md:items-center max-tablet:justify-center max-tablet:text-center"
@@ -41,7 +37,7 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
     <BenefitCard client:idle />
     {
       benefits.map(({ icon, alt, topText, bottomText, content }) => (
-        <div class="flex tablet:hidden flex-row col-span-3 items-center justify-center p-14 bg-light rounded-2xl h-auto  shadow gap-10">
+        <div class="flex tablet:hidden flex-row col-span-3 items-center justify-center p-14 bg-light rounded-2xl h-auto shadow gap-10">
           <img
             src={icon}
             alt={alt}

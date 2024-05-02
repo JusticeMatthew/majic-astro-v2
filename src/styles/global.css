@@ -45,7 +45,7 @@
 
 body {
   color: #0d111c;
-  overflow-x: hidden !important;
+  overflow-x: clip !important;
   background-image: linear-gradient(
     to right,
     rgba(248, 250, 252, 0.6),
@@ -56,8 +56,8 @@ body {
     rgba(115, 92, 221, 0.2),
     rgba(27, 82, 153, 0.4)
   );
-  transition-property: color, background-color, border-color,
-    text-decoration-color, fill, stroke !important;
+  transition-property: color, background, border-color, text-decoration-color,
+    fill, stroke !important;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
   transition-duration: 300ms !important;
 }
