@@ -1,7 +1,7 @@
 export default function Button({
   secondary,
-  disabled,
-  contact,
+  disabled = false,
+  contact = false,
   children,
   ...props
 }) {
@@ -16,10 +16,10 @@ export default function Button({
       {...props}
     >
       <div
-        className={`${
+        className={`absolute rounded-full z-10 ${
           secondary
-            ? 'absolute rounded-full -inset-[0px] group-hover:blur z-10 border-[3px] border-blurple group-hover:bg-primary-gradient'
-            : 'absolute rounded-full bg-primary-gradient -inset-[2px] z-10 group-hover:blur-md transition-all duration-75'
+            ? '-inset-[0px] group-hover:blur border-[3px] border-blurple group-hover:bg-primary-gradient'
+            : 'bg-primary-gradient -inset-[2px] group-hover:blur-md transition-all duration-75'
         }`}
       ></div>
       <span

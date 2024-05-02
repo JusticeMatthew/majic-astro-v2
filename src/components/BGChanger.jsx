@@ -25,7 +25,7 @@ export default function BGChanger({ children }) {
     if (inView) {
       bgIsDark.set(false);
       body.style.backgroundColor = '#20204E';
-      body.style.backgroundImage = 'none';
+      body.style.backgroundImage = 'rgba(0, 0, 0, 0.0)';
     }
   }, [inView]);
 

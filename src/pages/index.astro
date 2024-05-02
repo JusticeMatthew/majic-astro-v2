@@ -3,7 +3,7 @@ import MainLayout from '@/layouts/MainLayout.astro';
 import Landing from '@/containers/Landing.astro';
 import About from '@/containers/About.astro';
 import Services from '@/containers/Services.astro';
-import Examples from '@/containers/Examples.jsx';
+import Examples from '@/containers/Examples.astro';
 import Contact from '@/containers/Contact.astro';
 import Footer from '@/containers/Footer.astro';
 import ScrollingWords from '@/components/ScrollingWords.jsx';
@@ -16,7 +16,7 @@ import LargeCTA from '@/containers/LargeCTA.jsx';
   <About />
   <BGChanger client:idle>
     <ScrollingWords client:visible />
-    <Examples client:visible />
+    <Examples />
     <LargeCTA client:visible />
     <Services />
     <Contact />
