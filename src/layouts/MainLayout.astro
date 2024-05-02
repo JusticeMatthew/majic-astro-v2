@@ -53,7 +53,7 @@ import Header from '@/components/Header.jsx';
 
   <body>
     <Lenis client:idle root options={{ smoothWheel: true, smoothTouch: false }}>
-      <Header client:only="react" />
+      <Header client:load />
       <div class="relative">
         <div id="container" class="max-lg:overflow-x-clip">
           <slot />
