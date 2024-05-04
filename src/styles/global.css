@@ -31,24 +31,54 @@
   }
 
   .form-label {
-    @apply text-lg font-semibold;
+    @apply font-semibold;
   }
 
   .form-input {
-    @apply mt-2 w-full h-12 sm:h-14 p-3 rounded-2xl bg-slate-200 focus:outline-none;
+    @apply mt-2 w-full h-12 sm:h-14 p-3 rounded-lg bg-slate-200 focus:outline-none;
   }
 
   .form-textarea {
-    @apply resize-none w-full h-56 sm:h-[19.5rem] p-3 rounded-2xl bg-slate-200 focus:outline-none mt-2;
+    @apply resize-none w-full h-56 sm:h-[19.5rem] p-3 rounded-lg bg-slate-200 focus:outline-none mt-2;
   }
 }
 
+:root {
+  --step-00: clamp(0.8511rem, 0.836rem + 0.0732vi, 0.9rem);
+  --step-0: clamp(1rem, 0.9614rem + 0.1869vi, 1.125rem);
+  --step-1: clamp(1.175rem, 1.1037rem + 0.3458vi, 1.4063rem);
+  --step-2: clamp(1.3806rem, 1.2643rem + 0.564vi, 1.7578rem);
+  --step-3: clamp(1.6222rem, 1.4449rem + 0.8599vi, 2.1973rem);
+  --step-4: clamp(1.9061rem, 1.6469rem + 1.2568vi, 2.7466rem);
+  --step-5: clamp(2.2397rem, 1.8716rem + 1.7847vi, 3.4332rem);
+  --step-6: clamp(2.6316rem, 2.1197rem + 2.4821vi, 4.2915rem);
+  --step-7: clamp(3.0922rem, 2.3914rem + 3.3977vi, 5.3644rem);
+  --step-8: clamp(3.6333rem, 2.6858rem + 4.594vi, 6.7055rem);
+
+  --flat: 1;
+  --fine: 1.15;
+  --standard: 1.5;
+  --loose: 1.7;
+}
+
 body {
+  font-size: var(--step-0);
+  line-height: var(--standard);
   color: #0d111c;
+  background-color: #d8d7f3;
   overflow-x: clip !important;
   transition-property: all !important;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
   transition-duration: 300ms !important;
+}
+
+h1,
+h2,
+h3,
+button,
+input,
+label {
+  line-height: 1.1;
 }
 
 #container {

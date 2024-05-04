@@ -9,14 +9,14 @@ export default function Header() {
 
   return (
     <header
-      className={`w-full z-50 fixed h-20 backdrop-blur-lg flex items-center transition-all duration-150 ${
+      className={`w-full z-50 fixed h-16 backdrop-blur-lg flex items-center transition-all duration-150 ${
         $bgIsDark ? 'bg-light/20' : 'bg-light'
       }`}
     >
       <div id="container" className="flex w-full items-center justify-between">
         <a href="/" className="flex gap-2 cursor-pointer items-center">
-          <img src="/images/logo-svg.svg" alt="" width={56} height={56} />
-          <h1 className="md:text-2xl text-lg astro-font-calistoga">
+          <img src="/images/logo-svg.svg" alt="" width={46} height={46} />
+          <h1 className="text-logo astro-font-calistoga">
             Majic
             <br />
             Web Design

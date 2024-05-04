@@ -11,7 +11,7 @@ export default function BenefitCard() {
           whileInView={{ rotateY: 0, scale: [1, 1.05, 1] }}
           transition={{ duration: 1.3, delay: timing }}
           viewport={{ once: true }}
-          className="p-14 bg-light rounded-2xl max-tablet:hidden h-auto shadow gap-10 benefit-card relative"
+          className="p-14 bg-light rounded-lg max-tablet:hidden h-auto shadow gap-10 benefit-card relative"
         >
           <motion.div
             initial={{ opacity: 1 }}

@@ -37,7 +37,7 @@ export default function MobileNav() {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute right-0 w-40 p-4 shadow bg-light rounded-2xl">
+              <Menu.Items className="absolute right-0 w-40 p-4 shadow bg-light rounded-lg">
                 {navLinks.map((link) => (
                   <Menu.Item key={link[0]}>
                     {({ active, close }) => (
@@ -45,13 +45,13 @@ export default function MobileNav() {
                         onTouchStart={close}
                         className={`${
                           active ? 'bg-primary-gradient' : ''
-                        } text-xl font-semibold rounded-2xl py-2 px-3`}
+                        } text-xl font-semibold rounded-lg py-2 px-3`}
                       >
                         <Link
                           to={link[0]}
                           onClick={close}
                           offset={link[3]}
-                          className="text-xl font-semibold rounded-2xl"
+                          className="text-xl font-semibold rounded-lg"
                         >
                           <p>{link[1]}</p>
                         </Link>

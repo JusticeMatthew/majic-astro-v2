@@ -9,6 +9,11 @@ module.exports = {
       screens: {
         tablet: '1025px',
       },
+      fontSize: {
+        logo: ['var(--step-1)', 'var(--fine)'],
+        bread: 'var(--step-0)',
+        headline: 'var(--step-7)',
+      },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         cursive: ['Calistoga', ...defaultTheme.fontFamily.serif],

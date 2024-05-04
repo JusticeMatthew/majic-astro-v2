@@ -11,7 +11,7 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
 >
   <div class="grid justify-center w-full grid-cols-3 gap-4 md:gap-8">
     <div
-      class="col-span-3 bg-light max-h-[40rem] rounded-2xl flex items-center justify-evenly shadow py-4 md:py-16"
+      class="col-span-3 bg-light max-h-[40rem] rounded-lg flex items-center justify-evenly shadow py-4 md:py-16"
     >
       <div
         class="w-[36rem] h-[36rem] hidden tablet:inline p-4 mx-4 md:mx-16 place-content-center"
@@ -21,11 +21,11 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
       <div
         class="flex flex-col p-8 max-md:items-center max-tablet:justify-center max-tablet:text-center"
       >
-        <p class="text-4xl md:text-6xl font-cursive w-[12ch] mb-8">
+        <p class="text-6xl font-cursive w-[12ch] mb-8">
           Running your own business is
           <span class="text-gradient"> tough enough</span>
         </p>
-        <p class="mb-8 md:mb-16 w-[25ch] sm:w-[30ch] md:w-[40ch] md:text-xl">
+        <p class="mb-8 md:mb-16 w-[25ch] sm:w-[30ch] md:w-[40ch]">
           That&apos;s why Majic wants to provide a one-stop shop for businesses
           who need worry free web design & development services at a fair rate.
         </p>
@@ -39,7 +39,7 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
     <BenefitCard client:idle />
     {
       benefits.map(({ icon, alt, topText, bottomText, content }) => (
-        <div class="flex tablet:hidden flex-row col-span-3 items-center justify-center p-14 bg-light rounded-2xl h-auto shadow gap-10">
+        <div class="flex tablet:hidden flex-row col-span-3 items-center justify-center p-14 bg-light rounded-lg h-auto shadow gap-10">
           <img
             src={icon}
             alt={alt}
@@ -48,12 +48,12 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
             class="tablet:mb-8 max-sm:hidden"
           />
           <div>
-            <p class="text-5xl text-center text-text font-cursive">
+            <p class="text-5xl text-center font-cursive">
               <span class="text-gradient">{topText}</span>
               <br />
               <span class="whitespace-nowrap">{bottomText}</span>
             </p>
-            <p class="text-xl text-center mt-8 max-w-[40ch]">{content}</p>
+            <p class="mt-8">{content}</p>
           </div>
         </div>
       ))
