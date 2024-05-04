@@ -7,7 +7,7 @@ import Button from '@/components/Button.jsx';
   class="md:flex h-[80vh] hidden justify-center flex-col gap-20 relative"
 >
   <div class="absolute w-[130vw] h-full -translate-x-[25%] opacity-50">
-    <LargeCTASparkles client:visible />
+    <LargeCTASparkles client:visible={{ rootMargin: '1000px' }} />
   </div>
   <p class="z-10 text-8xl font-cursive text-light/90 relative drop-shadow-xl">
     Let's cast a spell of <span class="flashing-text">success</span> for your
