@@ -29,7 +29,7 @@ import Header from '@/components/Header.jsx';
       content="Majic Web Design is an affordable custom web design and development studio based in Central Florida."
     />
     <meta property="og:image" content="/images/og-logo.png" />
-    <title>Majic Web Design</title>
+    <title>Dev | Majic Web Design</title>
     <ScrollObserver />
     <AstroFont
       config={[
@@ -44,8 +44,26 @@ import Header from '@/components/Header.jsx';
           ],
           preload: true,
           display: 'swap',
-          selector: '.astro-font-test',
+          selector: '.astro-font-calistoga',
           fallback: 'serif',
+        },
+      ]}
+    />
+    <AstroFont
+      config={[
+        {
+          name: 'Inter',
+          src: [
+            {
+              style: 'normal',
+              weight: '400',
+              path: 'fonts/Inter.woff2',
+            },
+          ],
+          preload: true,
+          display: 'swap',
+          selector: '.astro-font-inter',
+          fallback: 'sans-serif',
         },
       ]}
     />
@@ -54,10 +72,8 @@ import Header from '@/components/Header.jsx';
   <body>
     <Lenis client:idle root options={{ smoothWheel: true, smoothTouch: false }}>
       <Header client:load />
-      <div class="relative">
-        <div id="container" class="max-lg:overflow-x-clip">
-          <slot />
-        </div>
+      <div id="container" class="max-lg:overflow-x-clip">
+        <slot />
       </div>
     </Lenis>
   </body>

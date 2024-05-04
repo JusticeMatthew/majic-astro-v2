@@ -13,10 +13,10 @@ export default function Header() {
         $bgIsDark ? 'bg-light/20' : 'bg-light'
       }`}
     >
-      <div id="container" className="flex items-center justify-between">
+      <div id="container" className="flex w-full items-center justify-between">
         <a href="/" className="flex gap-2 cursor-pointer items-center">
           <img src="/images/logo-svg.svg" alt="" width={56} height={56} />
-          <h1 className="md:text-2xl text-lg font-cursive">
+          <h1 className="md:text-2xl text-lg astro-font-calistoga">
             Majic
             <br />
             Web Design

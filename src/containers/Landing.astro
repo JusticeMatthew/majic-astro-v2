@@ -6,19 +6,19 @@ import Button from '@/components/Button';
   class="flex flex-col items-center justify-center min-h-screen text-center relative max-sm:h-[45rem]"
 >
   <h2
-    class="mb-8 text-[2.5rem] max-sm:leading-[3rem] max-sm:font-medium md:text-8xl astro-font-test"
+    class="mb-8 text-[2.5rem] max-sm:leading-[3rem] max-sm:font-medium md:text-8xl astro-font-calistoga"
   >
     We build beautiful websites for great businesses like
     <span class="text-gradient">yours</span>
   </h2>
-  <p class="mb-16 text-lg md:text-xl max-w-[65ch]">
+  <p class="mb-16 text-lg md:text-xl max-w-[65ch] astro-font-inter">
     <span class="hidden sm:inline"
       >We help local businesses find new customers online and grow their digital
       presence through stand-out websites & videos.</span
     > With our affordable plans and enchanting design we&apos;ll create a
     captivating experience for your audience.
   </p>
-  <Button client:load secondary={false}>Connect with us today</Button>
+  <Button client:load>Connect with us today</Button>
   <div class="my-3"></div>
   <Button client:load secondary={true}>More about Majic</Button>
 </section>

@@ -1,5 +1,5 @@
 export default function Button({
-  secondary,
+  secondary = false,
   disabled = false,
   contact = false,
   children,
@@ -11,8 +11,8 @@ export default function Button({
       className={`${
         secondary
           ? 'text-blurple font-semibold'
-          : 'font-medium bg-primary-gradient text-light disabled:opacity-50 disabled:pointer-events-none'
-      } relative group tracking-wide p-1 text-lg rounded-full transition-all duration-75`}
+          : 'font-medium bg-primary-gradient text-light'
+      } relative group tracking-wide p-1 text-lg rounded-full transition-all duration-75 disabled:opacity-50 disabled:pointer-events-none`}
       {...props}
     >
       <div

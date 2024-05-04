@@ -1,5 +1,5 @@
 ---
-import MainLayout from '@/layouts/MainLayout.astro';
+import Layout from '@/layouts/Layout.astro';
 import Landing from '@/containers/Landing.astro';
 import About from '@/containers/About.astro';
 import Services from '@/containers/Services.astro';
@@ -8,18 +8,18 @@ import Contact from '@/containers/Contact.astro';
 import Footer from '@/containers/Footer.astro';
 import ScrollingWords from '@/components/ScrollingWords.jsx';
 import BGChanger from '@/components/BGChanger.jsx';
-import LargeCTA from '@/containers/LargeCTA.jsx';
+import LargeCTA from '@/containers/LargeCTA.astro';
 ---
 
-<MainLayout>
+<Layout>
   <Landing />
   <About />
-  <BGChanger client:idle>
+  <BGChanger client:load>
     <ScrollingWords client:visible />
     <Examples />
-    <LargeCTA client:visible />
+    <LargeCTA />
     <Services />
     <Contact />
     <Footer />
   </BGChanger>
-</MainLayout>
+</Layout>

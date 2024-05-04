@@ -24,6 +24,9 @@ module.exports = {
           'linear-gradient(to right, #735CDD, #00A7E1, #735CDD)',
       },
     },
+    experimental: {
+      optimizeUniversalDefaults: true,
+    },
     plugins: [],
   },
 };
