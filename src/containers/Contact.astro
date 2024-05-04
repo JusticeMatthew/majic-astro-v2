@@ -27,7 +27,7 @@ import LargeHoverLogo from '@/components/LargeHoverLogo';
         business! Reach out today and we’ll respond within 48 hours.
       </p>
     </div>
-    <ContactForm client:only="react" />
+    <ContactForm client:visible />
   </div>
   <div class="flex flex-col items-center mt-4 sm:flex-row">
     <p class="text-center text-light text-md">
@@ -41,9 +41,13 @@ import LargeHoverLogo from '@/components/LargeHoverLogo';
   </div>
   {/* BG ITEMS */}
   <LargeHoverLogo
-    client:idle
+    client:visible
     duration={22}
     className="-left-[25rem] bottom-60"
   />
-  <LargeHoverLogo client:idle duration={18} className="-right-[25rem] top-20" />
+  <LargeHoverLogo
+    client:visible
+    duration={18}
+    className="-right-[25rem] top-20"
+  />
 </section>

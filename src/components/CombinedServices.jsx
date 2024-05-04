@@ -46,9 +46,9 @@ export default function CombinedServices() {
             </motion.div>
           ))}
         </motion.div>
-        <h4 className="w-full text-4xl text-center font-cursive hidden sm:block">
+        <p className="w-full text-4xl text-center font-cursive hidden sm:block">
           {activePlan.name}
-        </h4>
+        </p>
         {activePlan.recommended && (
           <div className="absolute left-0 flex justify-center w-full text-center top-6 sm:top-28 text-light">
             <p className="px-20 py-1 font-medium rounded-full bg-primary-gradient">

@@ -18,7 +18,11 @@ import Button from '@/components/Button';
     > With our affordable plans and enchanting design we&apos;ll create a
     captivating experience for your audience.
   </p>
-  <Button client:load>Connect with us today</Button>
+  <Button client:load aria="Connect with us today">
+    Connect with us today
+  </Button>
   <div class="my-3"></div>
-  <Button client:load secondary={true}>More about Majic</Button>
+  <Button client:load secondary={true} aria="More about Majic">
+    More about Majic
+  </Button>
 </section>

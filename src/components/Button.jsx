@@ -2,12 +2,14 @@ export default function Button({
   secondary = false,
   disabled = false,
   contact = false,
+  aria,
   children,
   ...props
 }) {
   return (
     <button
       disabled={disabled}
+      aria-label={aria}
       className={`${
         secondary
           ? 'text-blurple font-semibold'

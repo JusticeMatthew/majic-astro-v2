@@ -143,6 +143,7 @@ export default function ContactForm() {
       <div className="w-full flex justify-center mt-16">
         <Button
           type="submit"
+          aria="Send"
           secondary={false}
           disabled={errors.name || errors.email || errors.message || sending}
           contact={true}
