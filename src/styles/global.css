@@ -45,7 +45,6 @@
 
 body {
   color: #0d111c;
-  background-color: #d8d7f3;
   overflow-x: clip !important;
   transition-property: all !important;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
