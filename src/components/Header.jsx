@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <header
-      className={`w-full z-50 fixed h-16 backdrop-blur-lg flex items-center transition-all duration-150 ${
+      className={`w-full z-50 fixed h-[4.5rem] backdrop-blur-lg flex items-center transition-all duration-150 ${
         $bgIsDark ? 'bg-light/20' : 'bg-light'
       }`}
     >

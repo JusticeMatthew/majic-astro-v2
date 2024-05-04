@@ -18,7 +18,7 @@ export default function BenefitCard() {
             whileInView={{ opacity: 0 }}
             transition={{ delay: timing + 0.3, duration: 0.1 }}
             viewport={{ once: true }}
-            className="absolute ring ring-blurple rounded-xl m-auto w-[85%] h-[90%] left-0 right-0 top-0 bottom-0 flex items-center justify-center"
+            className="absolute rounded-xl m-auto w-[85%] h-[90%] left-0 right-0 top-0 bottom-0 flex items-center justify-center"
           >
             <img
               src="images/logo-svg.svg"
