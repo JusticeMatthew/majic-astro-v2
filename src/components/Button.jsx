@@ -4,6 +4,7 @@ export default function Button({
   contact = false,
   aria,
   children,
+  padding = '',
   ...props
 }) {
   return (
@@ -12,9 +13,9 @@ export default function Button({
       aria-label={aria}
       className={`${
         secondary
-          ? 'text-blurple font-semibold'
-          : 'font-medium bg-primary-gradient text-light'
-      } relative group tracking-wide p-1 text-lg rounded-full transition-all duration-75 disabled:opacity-50 disabled:pointer-events-none`}
+          ? 'text-blurple font-medium'
+          : 'bg-primary-gradient text-light'
+      } ${padding} relative group tracking-wide rounded-full transition-all duration-75 disabled:opacity-50 disabled:pointer-events-none`}
       {...props}
     >
       <div
@@ -24,11 +25,7 @@ export default function Button({
             : 'bg-primary-gradient -inset-[2px] group-hover:blur-md transition-all duration-75'
         }`}
       ></div>
-      <span
-        className={`py-3 relative z-20 block rounded-full group-hover:bg-dark transition-all duration-75 ${
-          contact ? 'px-32' : 'px-12'
-        }`}
-      >
+      <span className="py-small relative z-20 block rounded-full group-hover:bg-dark transition-all duration-75 px-huge">
         {children}
       </span>
     </button>

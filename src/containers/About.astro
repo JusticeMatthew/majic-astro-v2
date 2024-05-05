@@ -11,26 +11,30 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
 >
   <div class="grid justify-center w-full grid-cols-3 gap-4 md:gap-8">
     <div
-      class="col-span-3 bg-light max-h-[40rem] rounded-lg flex items-center justify-evenly shadow py-4 md:py-16"
+      class="col-span-3 bg-light max-h-[40rem] rounded-lg flex items-center justify-evenly shadow p-large"
     >
       <div
-        class="w-[36rem] h-[36rem] hidden tablet:inline p-4 mx-4 md:mx-16 place-content-center"
+        class="w-[36rem] h-[36rem] hidden tablet:inline place-content-center mr-medium"
       >
         <LottieAnimation src="animations/workingV2.json" autoplay="visible" />
       </div>
       <div
-        class="flex flex-col p-8 max-md:items-center max-tablet:justify-center max-tablet:text-center"
+        class="flex flex-col max-md:items-center max-tablet:justify-center max-tablet:text-center m-medium"
       >
-        <p class="text-6xl font-cursive w-[12ch] mb-8">
+        <h3 class="text-title font-cursive max-w-[12ch] mb-small balanced">
           Running your own business is
           <span class="text-gradient"> tough enough</span>
-        </p>
-        <p class="mb-8 md:mb-16 w-[25ch] sm:w-[30ch] md:w-[40ch]">
+        </h3>
+        <p class="my-small max-w-[40ch] balanced">
           That&apos;s why Majic wants to provide a one-stop shop for businesses
           who need worry free web design & development services at a fair rate.
         </p>
         <div>
-          <Button client:visible aria="See our affordable plans">
+          <Button
+            client:visible
+            aria="See our affordable plans"
+            padding="mt-small"
+          >
             See our affordable plans
           </Button>
         </div>

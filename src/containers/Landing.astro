@@ -1,26 +1,29 @@
 ---
 import Button from '@/components/Button';
+import LargeCTASparkles from '@/components/LargeCTASparkles.jsx';
 ---
 
 <section
   class="flex flex-col items-center justify-center min-h-screen text-center relative max-sm:h-[45rem]"
 >
-  <h2 class="mb-8 text-headline astro-font-calistoga">
+  <h2 class="my-medium text-headline astro-font-calistoga z-10 balanced">
     We build beautiful websites for great businesses like
     <span class="text-gradient">yours</span>
   </h2>
-  <p class="mb-16 max-w-[65ch] astro-font-inter">
+  <p class="my-medium max-w-[65ch] astro-font-inter z-10 balanced">
     <span class="hidden sm:inline"
       >We help local businesses find new customers online and grow their digital
       presence through stand-out websites & videos.</span
-    > With our affordable plans and enchanting design we&apos;ll create a
+    > With our affordable prices and enchanting design we&apos;ll create a
     captivating experience for your audience.
   </p>
-  <Button client:load aria="Connect with us today">
+  <Button client:load aria="Connect with us today" padding="my-medium">
     Connect with us today
   </Button>
-  <div class="my-3"></div>
   <Button client:load secondary={true} aria="More about Majic">
     More about Majic
   </Button>
+  <div class="fixed w-[130vw] h-full opacity-50 z-0">
+    <LargeCTASparkles client:load />
+  </div>
 </section>

@@ -23,7 +23,7 @@ export default function Header() {
           </h1>
         </a>
         <MobileNav />
-        <nav className="hidden sm:flex gap-2">
+        <nav className="hidden sm:flex gap-small">
           {navLinks.map((link) => (
             <ScrollLink key={link[0]} to={link[0]}>
               {link[1]}

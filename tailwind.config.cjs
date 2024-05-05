@@ -9,9 +9,29 @@ module.exports = {
       screens: {
         tablet: '1025px',
       },
+      padding: {
+        small: 'var(--space-s)',
+        medium: 'var(--space-m)',
+        large: 'var(--space-l)',
+        huge: 'var(--space-xl)',
+      },
+      margin: {
+        small: 'var(--space-s)',
+        medium: 'var(--space-m)',
+        large: 'var(--space-l)',
+        huge: 'var(--space-xl)',
+      },
+      gap: {
+        small: 'var(--space-s)',
+        medium: 'var(--space-m)',
+        large: 'var(--space-l)',
+        huge: 'var(--space-xl)',
+      },
       fontSize: {
         logo: ['var(--step-1)', 'var(--fine)'],
+        min: 'var(--step-00)',
         bread: 'var(--step-0)',
+        title: 'var(--step-5)',
         headline: 'var(--step-7)',
       },
       fontFamily: {
@@ -32,6 +52,6 @@ module.exports = {
     experimental: {
       optimizeUniversalDefaults: true,
     },
-    plugins: [],
+    plugins: [require('tailwindcss-animate')],
   },
 };
