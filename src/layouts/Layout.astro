@@ -1,7 +1,6 @@
 ---
 import '@/styles/global.css';
 import { ScrollObserver } from 'astro-scroll-observer';
-import { ReactLenis } from '@studio-freight/react-lenis';
 import { AstroFont } from 'astro-font';
 import Header from '@/components/Header.jsx';
 ---
@@ -67,18 +66,24 @@ import Header from '@/components/Header.jsx';
         },
       ]}
     />
-  </head>
+    <script>
+      import Lenis from 'lenis';
+
+      const lenis = new Lenis({ syncTouch: false });
+
+      function raf(time: number) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script></head
+  >
 
   <body>
-    <ReactLenis
-      client:idle
-      root
-      options={{ smoothWheel: true, smoothTouch: false }}
-    >
-      <Header client:load />
-      <div id="container" class="max-lg:overflow-x-clip">
-        <slot />
-      </div>
-    </ReactLenis>
+    <Header client:load />
+    <div id="container" class="max-lg:overflow-x-clip">
+      <slot />
+    </div>
   </body>
 </html>
