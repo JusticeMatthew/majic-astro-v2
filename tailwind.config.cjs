@@ -52,6 +52,6 @@ module.exports = {
     experimental: {
       optimizeUniversalDefaults: true,
     },
-    plugins: [require('tailwindcss-animate')],
   },
+  plugins: [require('tailwindcss-animate')],
 };

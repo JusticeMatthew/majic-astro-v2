@@ -6,7 +6,7 @@ import { bgIsDark } from '@/store/darkBg';
 export default function LargeCTASparkles() {
   const $bgIsDark = useStore(bgIsDark);
   return (
-    <Canvas>
+    <Canvas className="animate-in fade-in-0 duration-700">
       <Sparkles
         count={30}
         scale={10}
