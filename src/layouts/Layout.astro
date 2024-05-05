@@ -1,7 +1,7 @@
 ---
 import '@/styles/global.css';
 import { ScrollObserver } from 'astro-scroll-observer';
-import { Lenis } from '@studio-freight/react-lenis';
+import { ReactLenis } from '@studio-freight/react-lenis';
 import { AstroFont } from 'astro-font';
 import Header from '@/components/Header.jsx';
 ---
@@ -70,11 +70,15 @@ import Header from '@/components/Header.jsx';
   </head>
 
   <body>
-    <Lenis client:idle root options={{ smoothWheel: true, smoothTouch: false }}>
+    <ReactLenis
+      client:idle
+      root
+      options={{ smoothWheel: true, smoothTouch: false }}
+    >
       <Header client:load />
       <div id="container" class="max-lg:overflow-x-clip">
         <slot />
       </div>
-    </Lenis>
+    </ReactLenis>
   </body>
 </html>
