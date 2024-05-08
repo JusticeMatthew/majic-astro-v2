@@ -11,12 +11,14 @@ module.exports = {
       },
       padding: {
         small: 'var(--space-s)',
+        sm: 'var(--space-s-m)',
         medium: 'var(--space-m)',
         large: 'var(--space-l)',
         huge: 'var(--space-xl)',
       },
       margin: {
         small: 'var(--space-s)',
+        sm: 'var(--space-s-m)',
         medium: 'var(--space-m)',
         large: 'var(--space-l)',
         huge: 'var(--space-xl)',
@@ -32,7 +34,7 @@ module.exports = {
         min: 'var(--step-00)',
         bread: 'var(--step-0)',
         title: 'var(--step-5)',
-        headline: 'var(--step-7)',
+        headline: 'var(--step-6)',
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
