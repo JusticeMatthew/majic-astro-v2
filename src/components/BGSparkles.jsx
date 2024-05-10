@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useStore } from '@nanostores/react';
 import { bgIsDark } from '@/store/darkBg';
 
-export default function LargeCTASparkles() {
+export default function BGSparkles() {
   const $bgIsDark = useStore(bgIsDark);
   return (
     <motion.div
@@ -17,7 +17,7 @@ export default function LargeCTASparkles() {
         <Sparkles
           count={30}
           scale={12}
-          size={10}
+          size={[5, 10]}
           speed={0.6}
           color="#735CDD"
           noise={15}
