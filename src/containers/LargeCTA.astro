@@ -2,16 +2,25 @@
 import Button from '@/components/Button.jsx';
 ---
 
+<script src="../scripts/largeCTAScrollTrigger.js"></script>
+
 <section
-  class="md:flex h-[80vh] hidden justify-center flex-col gap-20 relative"
+  class="min-h-[80vh] flex justify-center flex-col gap-large relative my-3x"
 >
-  <p class="z-10 text-8xl font-cursive text-light/90 relative drop-shadow-xl">
-    Let's cast a spell of <span class="flashing-text">success</span> for your
-    online endeavors
+  <h3 id="content-cta" class="z-10 text-headline font-cursive relative">
+    Let's cast a spell of <span class="flashing-text drop-shadow-xl"
+      >success</span
+    > for your online endeavors
+  </h3>
+  <p id="content-cta" class="max-w-[75ch]">
+    You have a business to run. That’s why we go above and beyond to provide the
+    most complete digital service to our clients at an affordable price.
+    Everything you need to thrive online.
   </p>
-  <div>
+  <p id="content-cta" class="font-bold">We take care of it.</p>
+  <div id="content-cta" class="mt-medium">
     <Button client:visible aria="Get in touch">
-      <p class="px-20">Get in touch</p>
+      <p class="px-huge">Get in touch</p>
     </Button>
   </div>
 </section>

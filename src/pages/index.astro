@@ -14,11 +14,11 @@ import LargeCTA from '@/containers/LargeCTA.astro';
 <Layout>
   <Landing />
   <About />
-  <BGChanger client:load>
+  <LargeCTA />
+  <Services />
+  <BGChanger client:idle>
     <ScrollingWords client:visible />
     <Examples />
-    <LargeCTA />
-    <Services />
     <Contact />
     <Footer />
   </BGChanger>

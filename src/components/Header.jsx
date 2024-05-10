@@ -17,9 +17,10 @@ export default function Header() {
         <a href="/" className="flex gap-2 cursor-pointer items-center">
           <img src="/images/logo-svg.svg" alt="" width={46} height={46} />
           <h1 className="text-logo astro-font-calistoga">
-            Majic
-            <br />
-            Web Design
+            Majic{' '}
+            <span className="astro-font-inter text-bread">
+              | Building beautiful websites
+            </span>
           </h1>
         </a>
         <MobileNav />

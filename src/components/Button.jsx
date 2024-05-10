@@ -21,7 +21,7 @@ export default function Button({
       <div
         className={`absolute rounded-full z-10 ${
           secondary
-            ? '-inset-[0px] group-hover:blur border-[3px] border-blurple group-hover:bg-primary-gradient backdrop-blur-md'
+            ? '-inset-[0px] group-hover:blur border-[3px] border-blurple group-hover:bg-primary-gradient backdrop-blur bg-light/5'
             : 'bg-primary-gradient -inset-[2px] group-hover:blur-md'
         }`}
       ></div>

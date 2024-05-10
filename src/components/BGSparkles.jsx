@@ -11,7 +11,7 @@ export default function BGSparkles() {
       animate={{ opacity: 50 }}
       initial={{ opacity: 0 }}
       transition={{ duration: 4 }}
-      class="fixed w-[130vw] h-full z-0"
+      className="fixed w-[130vw] h-full z-0"
     >
       <Canvas className="opacity-50">
         <Sparkles

@@ -6,19 +6,13 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
 
 <section
   id="services"
-  class="relative flex w-full h-[min(auto, 60vh)] my-16 items-center text-light max-sm:text-sm"
+  class="relative flex w-full h-[min(auto, 60vh)] my-3x items-center text-light max-sm:text-sm"
 >
   <div class="flex flex-col w-full gap-8 mt-20">
     <p class="text-4xl tracking-wide sm:text-6xl font-cursive">What we offer</p>
     <div
       class="flex flex-col justify-between w-auto md:w-full max-md:gap-10 md:text-lg"
     >
-      <p class="max-w-[75ch] opacity-75">
-        You have a business to run. That’s why we go above and beyond to provide
-        the most complete digital service to our clients at an affordable price.
-        Everything you need to thrive online.
-      </p>
-      <p class="font-bold sm:mt-8">We take care of it.</p>
       <CombinedServices client:visible />
       <div class="hidden grid-cols-3 gap-8 mt-16 tablet:grid">
         {

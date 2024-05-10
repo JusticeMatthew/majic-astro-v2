@@ -6,8 +6,12 @@ const spacing = {
   sm: 'var(--space-s-m)',
   sl: 'var(--space-s-l)',
   medium: 'var(--space-m)',
+  ml: 'var(--space-ml)',
   large: 'var(--space-l)',
   huge: 'var(--space-xl)',
+  '2x': 'var(--space-2xl)',
+  '3x': 'var(--space-3xl)',
+  '4x': 'var(--space-4xl)',
 };
 
 module.exports = {
