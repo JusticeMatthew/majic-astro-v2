@@ -83,7 +83,7 @@ import LargeCTASparkles from '@/components/LargeCTASparkles';
 
   <body>
     <Header client:load />
-    <LargeCTASparkles client:idle />
+    <LargeCTASparkles client:only="react" />
     <div id="container" class="max-lg:overflow-x-clip">
       <slot />
     </div>
