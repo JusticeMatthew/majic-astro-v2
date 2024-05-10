@@ -6,60 +6,58 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
 
 <section
   id="services"
-  class="relative flex w-full h-[min(auto, 60vh)] my-3x items-center text-light max-sm:text-sm"
+  class="relative flex flex-col w-full h-[min(auto, 60vh)] my-3x items-center"
 >
-  <div class="flex flex-col w-full gap-8 mt-20">
-    <p class="text-4xl tracking-wide sm:text-6xl font-cursive">What we offer</p>
-    <div
-      class="flex flex-col justify-between w-auto md:w-full max-md:gap-10 md:text-lg"
-    >
-      <CombinedServices client:visible />
-      <div class="hidden grid-cols-3 gap-8 mt-16 tablet:grid">
-        {
-          pricingPlans.map((plan) => (
-            <div
-              class={`flex flex-col justify-between h-auto py-16 shadow bg-light rounded-lg text-dark relative ${
-                plan.recommended ? 'ring-[3px] ring-blurple' : ''
-              }`}
-            >
-              {plan.recommended && (
-                <div class="absolute left-0 flex justify-center w-full text-center -top-4 text-light">
-                  <p class="px-20 py-1 font-medium rounded-full w-fit bg-primary-gradient">
-                    Most Popular
-                  </p>
-                </div>
-              )}
-              <div>
-                <div class="w-[16rem] h-[16rem] mx-auto">
-                  <LottieAnimation src={plan.lottie} autoplay="visible" />
-                </div>
-                <p class="w-full mt-8 text-4xl text-center font-cursive">
-                  {plan.name}
+  <h3 class="text-title font-cursive place-self-start mb-medium">
+    What we offer
+  </h3>
+  <div class="flex flex-col justify-between w-full">
+    <CombinedServices client:visible />
+    <div class="hidden grid-cols-3 gap-medium mt-medium tablet:grid">
+      {
+        pricingPlans.map((plan) => (
+          <div
+            class={`flex flex-col justify-between h-auto py-huge shadow bg-light rounded-lg text-dark relative ${
+              plan.recommended ? 'ring-[3px] ring-blurple' : ''
+            }`}
+          >
+            {plan.recommended && (
+              <div class="absolute left-0 flex justify-center w-full text-center -top-4 text-light">
+                <p class="px-huge py-1 font-medium rounded-full w-fit bg-primary-gradient">
+                  Most Popular
                 </p>
-                <div class="px-12 mt-8 mb-16">
-                  {plan.services.map((item) => (
-                    <div class="flex mb-6">
-                      <img
-                        src="/icons/check-icon.svg"
-                        alt=""
-                        width={20}
-                        height={20}
-                      />
-                      <p class="inline ml-6">{item}</p>
-                    </div>
-                  ))}
-                </div>
               </div>
-              <div>
-                <p class="w-full text-3xl text-center font-cursive">
-                  {plan.price}
-                </p>
-                <p class="w-full mt-3 text-sm text-center">{plan.monthly}</p>
+            )}
+            <div>
+              <div class="w-[16rem] h-[16rem] mx-auto">
+                <LottieAnimation src={plan.lottie} autoplay="visible" />
+              </div>
+              <p class="w-full mt-large text-subTitle text-center font-cursive">
+                {plan.name}
+              </p>
+              <div class="px-12 mt-8 mb-16">
+                {plan.services.map((item) => (
+                  <div class="flex mb-6">
+                    <img
+                      src="/icons/check-icon.svg"
+                      alt=""
+                      width={20}
+                      height={20}
+                    />
+                    <p class="inline ml-6">{item}</p>
+                  </div>
+                ))}
               </div>
             </div>
-          ))
-        }
-      </div>
+            <div>
+              <p class="w-full text-3xl text-center font-cursive">
+                {plan.price}
+              </p>
+              <p class="w-full mt-3 text-sm text-center">{plan.monthly}</p>
+            </div>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
