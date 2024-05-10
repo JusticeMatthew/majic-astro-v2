@@ -1,10 +1,9 @@
 ---
 import Button from '@/components/Button';
-import LargeCTASparkles from '@/components/LargeCTASparkles.jsx';
 ---
 
 <section
-  class="flex flex-col items-center justify-center min-h-screen text-center relative max-sm:h-[45rem] animate-in fade-in-0 duration-1000"
+  class="flex flex-col items-center justify-center min-h-screen text-center animate-in fade-in-0 duration-1000"
 >
   <h2 class="my-sm text-headline astro-font-calistoga z-10 balanced">
     We build beautiful websites for great businesses like
@@ -17,13 +16,10 @@ import LargeCTASparkles from '@/components/LargeCTASparkles.jsx';
     > With our affordable prices and enchanting design we&apos;ll create a
     captivating experience for your audience.
   </p>
-  <Button client:load aria="Connect with us today" padding="my-sm">
+  <Button client:load aria="Connect with us today" margin="my-sm">
     Connect with us today
   </Button>
   <Button client:load secondary={true} aria="More about Majic">
     More about Majic
   </Button>
-  <div class="fixed w-[130vw] h-full opacity-50 z-0">
-    <LargeCTASparkles client:idle />
-  </div>
 </section>

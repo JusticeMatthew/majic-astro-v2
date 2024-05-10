@@ -3,6 +3,7 @@ import '@/styles/global.css';
 import { ScrollObserver } from 'astro-scroll-observer';
 import { AstroFont } from 'astro-font';
 import Header from '@/components/Header.jsx';
+import LargeCTASparkles from '@/components/LargeCTASparkles';
 ---
 
 <html
@@ -82,6 +83,7 @@ import Header from '@/components/Header.jsx';
 
   <body>
     <Header client:load />
+    <LargeCTASparkles client:idle />
     <div id="container" class="max-lg:overflow-x-clip">
       <slot />
     </div>

@@ -59,13 +59,14 @@
   --space-2xs: clamp(0.5rem, 0.4614rem + 0.1869vi, 0.625rem);
   --space-xs: clamp(0.75rem, 0.6922rem + 0.2804vi, 0.9375rem);
   --space-s: clamp(1rem, 0.9229rem + 0.3738vi, 1.25rem);
+  --space-s-m: clamp(1rem, 0.788rem + 1.028vi, 1.6875rem);
+  --space-s-l: clamp(1rem, 0.6145rem + 1.8692vi, 2.25rem);
   --space-m: clamp(1.5rem, 1.3843rem + 0.5607vi, 1.875rem);
   --space-l: clamp(2rem, 1.8458rem + 0.7477vi, 2.5rem);
   --space-xl: clamp(3rem, 2.7687rem + 1.1215vi, 3.75rem);
   --space-2xl: clamp(4rem, 3.6916rem + 1.4953vi, 5rem);
   --space-3xl: clamp(6rem, 5.5374rem + 2.243vi, 7.5rem);
   --space-4xl: clamp(8rem, 7.3832rem + 2.9907vi, 10rem);
-  --space-s-m: clamp(1rem, 0.788rem + 1.028vi, 1.6875rem);
 
   --flat: 1;
   --fine: 1.15;
@@ -102,6 +103,10 @@ label {
 
 .balanced {
   text-wrap: balance;
+}
+
+.nowrap {
+  text-wrap: nowrap;
 }
 
 html.lenis,

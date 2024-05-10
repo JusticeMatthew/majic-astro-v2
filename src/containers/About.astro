@@ -9,9 +9,9 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
   id="about"
   class="relative flex items-center justify-center w-full min-h-screen md:min-h-[80vh]"
 >
-  <div class="grid justify-center w-full grid-cols-3 gap-4 md:gap-8">
+  <div class="grid justify-center w-full grid-cols-3 gap-medium">
     <div
-      class="col-span-3 bg-light max-h-[40rem] rounded-lg flex items-center justify-evenly shadow p-large"
+      class="col-span-3 bg-light max-h-[40rem] rounded-lg flex items-center justify-evenly shadow p-sl"
     >
       <div
         class="w-[36rem] h-[36rem] hidden tablet:inline place-content-center mr-medium"
@@ -19,7 +19,7 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
         <LottieAnimation src="animations/workingV2.json" autoplay="visible" />
       </div>
       <div
-        class="flex flex-col max-md:items-center max-tablet:justify-center max-tablet:text-center m-medium"
+        class="flex flex-col max-md:items-center max-tablet:justify-center max-tablet:text-center"
       >
         <h3 class="text-title font-cursive max-w-[12ch] mb-small balanced">
           Running your own business is
@@ -29,15 +29,13 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
           That&apos;s why Majic wants to provide a one-stop shop for businesses
           who need worry free web design & development services at a fair rate.
         </p>
-        <div>
-          <Button
-            client:visible
-            aria="See our affordable plans"
-            padding="mt-small"
-          >
-            See our affordable plans
-          </Button>
-        </div>
+        <Button
+          client:visible
+          aria="See our affordable pricing"
+          margin="mt-sm max-w-min"
+        >
+          See our <span class="sm:inline hidden">affordable</span> pricing
+        </Button>
       </div>
     </div>
     <BenefitCard client:idle />
