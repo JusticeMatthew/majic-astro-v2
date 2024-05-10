@@ -87,9 +87,9 @@ import BGSparkles from '@/components/BGSparkles.jsx';
   >
 
   <body>
-    <Header />
     <BGSparkles client:idle />
-    <div id="container" class="max-lg:overflow-x-clip">
+    <div id="container" class="max-lg:overflow-x-clip relative">
+      <Header />
       <slot />
     </div>
   </body>
