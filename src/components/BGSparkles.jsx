@@ -22,12 +22,7 @@ export default function BGSparkles() {
           color="#735CDD"
           noise={15}
         />
-        <Sparkles
-          count={30}
-          scale={20}
-          size={10}
-          color={$bgIsDark ? '#e36ff2' : null}
-        />
+        <Sparkles count={30} scale={20} size={10} />
         <Sparkles count={30} scale={30} size={15} color="#00A7E1" />
       </Canvas>
     </motion.div>
