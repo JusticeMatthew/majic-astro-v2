@@ -3,7 +3,7 @@ import '@/styles/global.css';
 import { ScrollObserver } from 'astro-scroll-observer';
 import { AstroFont } from 'astro-font';
 import Header from '@/components/Header.astro';
-import BGSparkles from '@/components/BGSparkles.jsx';
+import GradientBG from '@/components/GradientBG.astro';
 ---
 
 <html
@@ -87,7 +87,7 @@ import BGSparkles from '@/components/BGSparkles.jsx';
   >
 
   <body>
-    <BGSparkles client:idle />
+    <GradientBG />
     <div id="container" class="max-lg:overflow-x-clip relative">
       <Header />
       <slot />

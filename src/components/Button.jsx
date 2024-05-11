@@ -12,20 +12,18 @@ export default function Button({
       disabled={disabled}
       aria-label={aria}
       className={`${
-        secondary
-          ? 'text-blurple font-medium'
-          : 'bg-primary-gradient text-light'
-      } ${margin} relative group rounded-full transition-all duration-75 disabled:opacity-50 disabled:pointer-events-none`}
+        secondary ? 'text-light font-medium' : 'bg-primary-gradient text-light'
+      } ${margin} relative group rounded-lg transition-all drop-shadow-xl duration-75 disabled:opacity-50 disabled:pointer-events-none`}
       {...props}
     >
       <div
-        className={`absolute rounded-full z-10 ${
+        className={`absolute rounded-lg z-10 -inset-[2px] group-hover:blur-lg ${
           secondary
-            ? '-inset-[0px] group-hover:blur border-[3px] border-blurple group-hover:bg-primary-gradient backdrop-blur bg-light/5'
-            : 'bg-primary-gradient -inset-[2px] group-hover:blur-md'
+            ? 'group-hover:bg-primary-gradient backdrop-blur-lg bg-blurple/40'
+            : 'bg-primary-gradient'
         }`}
       ></div>
-      <span className="py-small relative z-20 block rounded-full group-hover:bg-dark px-huge nowrap">
+      <span className="py-small relative z-20 block rounded-lg group-hover:bg-dark px-huge nowrap">
         {children}
       </span>
     </button>
