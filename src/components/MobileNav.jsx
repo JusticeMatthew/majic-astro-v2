@@ -10,7 +10,7 @@ export default function MobileNav() {
         {({ open }) => (
           <>
             {open ? (
-              <Menu.Button className="flex items-center justify-center w-14 h-14">
+              <Menu.Button className="flex h-14 w-14 items-center justify-center">
                 <img
                   src="icons/close-icon.svg"
                   alt="navigation menu"
@@ -19,7 +19,7 @@ export default function MobileNav() {
                 />
               </Menu.Button>
             ) : (
-              <Menu.Button className="flex items-center justify-center w-14 h-14">
+              <Menu.Button className="flex h-14 w-14 items-center justify-center">
                 <img
                   src="icons/burger-menu.svg"
                   alt="navigation menu"
@@ -37,7 +37,7 @@ export default function MobileNav() {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute right-0 w-40 p-4 shadow bg-light rounded-lg">
+              <Menu.Items className="absolute right-0 w-40 rounded-lg bg-light p-4 shadow">
                 {navLinks.map((link) => (
                   <Menu.Item key={link[0]}>
                     {({ active, close }) => (
@@ -45,13 +45,13 @@ export default function MobileNav() {
                         onTouchStart={close}
                         className={`${
                           active ? 'bg-primary-gradient' : ''
-                        } text-xl font-semibold rounded-lg py-2 px-3`}
+                        } rounded-lg px-3 py-2 text-xl font-semibold`}
                       >
                         <Link
                           to={link[0]}
                           onClick={close}
                           offset={link[3]}
-                          className="text-xl font-semibold rounded-lg"
+                          className="rounded-lg text-xl font-semibold"
                         >
                           <p>{link[1]}</p>
                         </Link>

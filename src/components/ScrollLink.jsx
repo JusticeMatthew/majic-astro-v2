@@ -11,7 +11,7 @@ export default function ScrollLink({ children, to }) {
       smooth={true}
       isDynamic={true}
       duration={500}
-      className="py-2 px-3 text-lg bg-primary-gradient bg-bottom bg-[length:100%_0%] bg-no-repeat hover:bg-[length:100%_100%] transition-[background-size] rounded-lg hover:text-light cursor-pointer"
+      className="cursor-pointer rounded-lg bg-primary-gradient bg-[length:100%_0%] bg-bottom bg-no-repeat px-3 py-2 text-lg transition-[background-size] hover:bg-[length:100%_100%] hover:text-light"
       alt={to}
     >
       {children}

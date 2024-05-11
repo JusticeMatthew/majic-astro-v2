@@ -21,21 +21,21 @@ export default function CombinedServices() {
   return (
     <motion.div
       layout
-      className="flex flex-col items-center mt-20 sm:mt-32 text-dark tablet:hidden"
+      className="mt-20 flex flex-col items-center text-dark sm:mt-32 tablet:hidden"
     >
       <motion.div
         layout
-        className="flex flex-col justify-between h-auto py-16 shadow bg-light rounded-b-2xl relative w-full"
+        className="relative flex h-auto w-full flex-col justify-between rounded-b-2xl bg-light py-16 shadow"
       >
         <motion.div
           layout
-          className="absolute flex items-center w-full h-20 text-lg text-center -top-20 bg-light/60 rounded-t-2xl"
+          className="absolute -top-20 flex h-20 w-full items-center rounded-t-2xl bg-light/60 text-center text-lg"
         >
           {['Personal', 'Business', 'Commerce'].map((tabName) => (
             <motion.div
               layout
               key={tabName}
-              className={`w-1/3 flex items-center justify-center h-full ${
+              className={`flex h-full w-1/3 items-center justify-center ${
                 activePlan.name === tabName ? 'bg-light font-semibold' : ''
               } ${activePlan === personal ? 'rounded-tl-2xl' : ''} ${
                 activePlan === commerce ? 'rounded-tr-2xl' : ''
@@ -46,41 +46,41 @@ export default function CombinedServices() {
             </motion.div>
           ))}
         </motion.div>
-        <p className="w-full text-4xl text-center font-cursive hidden sm:block">
+        <p className="hidden w-full text-center font-cursive text-4xl sm:block">
           {activePlan.name}
         </p>
         {activePlan.recommended && (
-          <div className="absolute left-0 flex justify-center w-full text-center top-6 sm:top-28 text-light">
-            <p className="px-20 py-1 font-medium rounded-full bg-primary-gradient">
+          <div className="absolute left-0 top-6 flex w-full justify-center text-center text-light sm:top-28">
+            <p className="rounded-full bg-primary-gradient px-20 py-1 font-medium">
               Recommended
             </p>
           </div>
         )}
-        <div className="sm:flex sm:flex-row sm:mx-auto sm:mt-16">
+        <div className="sm:mx-auto sm:mt-16 sm:flex sm:flex-row">
           <div>
-            <h4 className="w-full mt-8 text-4xl text-center font-cursive sm:hidden">
+            <h4 className="mt-8 w-full text-center font-cursive text-4xl sm:hidden">
               {activePlan.name}
             </h4>
           </div>
-          <div className="px-8 mt-8 mb-16 sm:px-12">
+          <div className="mb-16 mt-8 px-8 sm:px-12">
             {activePlan.services.map((service) => (
-              <div key={service} className="flex mb-6">
+              <div key={service} className="mb-6 flex">
                 <img
                   src="/icons/check-icon.svg"
                   alt=""
                   width={20}
                   height={20}
                 />
-                <p className="inline ml-6">{service}</p>
+                <p className="ml-6 inline">{service}</p>
               </div>
             ))}
           </div>
         </div>
         <div>
-          <p className="w-full text-3xl text-center font-cursive">
+          <p className="w-full text-center font-cursive text-3xl">
             {activePlan.price}
           </p>
-          <p className="w-full mt-3 text-sm text-center">
+          <p className="mt-3 w-full text-center text-sm">
             {activePlan.monthly}
           </p>
         </div>

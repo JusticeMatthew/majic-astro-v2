@@ -37,17 +37,17 @@ export default function ParallaxText({
 
   return (
     <div
-      className={`overflow-visible text-5xl whitespace-nowrap flex flex-nowrap ${className}`}
+      className={`flex flex-nowrap overflow-visible whitespace-nowrap text-5xl ${className}`}
     >
       <motion.p
         style={{ x }}
-        className="uppercase flex whitespace-nowrap flex-nowrap"
+        className="flex flex-nowrap whitespace-nowrap uppercase"
       >
-        <span className="block mr-8 text-gradient-parallax">{children}</span>
-        <span className="block mr-8 text-gradient-parallax">{children}</span>
-        <span className="block mr-8 text-gradient-parallax">{children}</span>
-        <span className="block mr-8 text-gradient-parallax">{children}</span>
-        <span className="block mr-8 text-gradient-parallax">{children}</span>
+        <span className="text-gradient-parallax mr-8 block">{children}</span>
+        <span className="text-gradient-parallax mr-8 block">{children}</span>
+        <span className="text-gradient-parallax mr-8 block">{children}</span>
+        <span className="text-gradient-parallax mr-8 block">{children}</span>
+        <span className="text-gradient-parallax mr-8 block">{children}</span>
       </motion.p>
     </div>
   );

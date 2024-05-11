@@ -4,11 +4,11 @@ export default function ScrollingWords() {
   return (
     <div
       id="examples"
-      className="flex flex-row min-h-[16rem] sm:min-h-[24rem] pointer-events-none items-center"
+      className="pointer-events-none flex min-h-[16rem] flex-row items-center sm:min-h-[24rem]"
     >
       <ParallaxText
         baseVelocity={1}
-        className="uppercase text-7xl font-cursive sm:text-9xl md:my-0"
+        className="font-cursive text-7xl uppercase sm:text-9xl md:my-0"
       >
         Abracadabra Presto Alakazam Hocus Pocus
       </ParallaxText>

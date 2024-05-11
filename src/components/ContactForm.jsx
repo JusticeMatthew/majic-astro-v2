@@ -51,10 +51,10 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit(sendEmail)}
-      className="flex flex-col w-full text-dark"
+      className="flex w-full flex-col text-dark"
     >
-      <div className="flex flex-col w-full sm:gap-16 md:gap-24 sm:flex-row min-h-96">
-        <div className="w-full mt-16">
+      <div className="min-h-96 flex w-full flex-col sm:flex-row sm:gap-16 md:gap-24">
+        <div className="mt-16 w-full">
           <div className="form-container">
             <label htmlFor="name" className="form-label">
               Name
@@ -65,14 +65,14 @@ export default function ContactForm() {
               {...register('name')}
               className={`form-input ${
                 errors.name
-                  ? 'focus-within:ring-4 ring-4 ring-red-700'
-                  : 'hover:ring-4 focus-within:ring-4 ring-blurple'
+                  ? 'ring-4 ring-red-700 focus-within:ring-4'
+                  : 'ring-blurple focus-within:ring-4 hover:ring-4'
               }`}
             />
             <p
               className={
                 errors.name
-                  ? 'text-red-500 text-xs visible h-5 mt-2'
+                  ? 'visible mt-2 h-5 text-xs text-red-500'
                   : 'invisible'
               }
             >
@@ -89,14 +89,14 @@ export default function ContactForm() {
               {...register('email')}
               className={`form-input ${
                 errors.email
-                  ? 'focus-within:ring-4 ring-4 ring-red-700'
-                  : 'hover:ring-4 focus-within:ring-4 ring-blurple'
+                  ? 'ring-4 ring-red-700 focus-within:ring-4'
+                  : 'ring-blurple focus-within:ring-4 hover:ring-4'
               }`}
             />
             <p
               className={
                 errors.email
-                  ? 'text-red-500 text-xs visible h-5 mt-2'
+                  ? 'visible mt-2 h-5 text-xs text-red-500'
                   : 'invisible'
               }
             >
@@ -111,11 +111,11 @@ export default function ContactForm() {
               id="company"
               type="text"
               {...register('company')}
-              className="form-input hover:ring-4 focus-within:ring-4 ring-blurple"
+              className="form-input ring-blurple focus-within:ring-4 hover:ring-4"
             />
           </div>
         </div>
-        <div className="w-full mt-0 sm:mt-16">
+        <div className="mt-0 w-full sm:mt-16">
           <label htmlFor="message" className="form-label">
             Message
           </label>
@@ -125,14 +125,14 @@ export default function ContactForm() {
             {...register('message')}
             className={`form-textarea ${
               errors.message
-                ? 'focus-within:ring-4 ring-4 ring-red-700'
-                : 'hover:ring-4 focus-within:ring-4 ring-blurple'
+                ? 'ring-4 ring-red-700 focus-within:ring-4'
+                : 'ring-blurple focus-within:ring-4 hover:ring-4'
             }`}
           />
           <p
             className={
               errors.message
-                ? 'text-red-500 text-xs visible h-5 mt-2'
+                ? 'visible mt-2 h-5 text-xs text-red-500'
                 : 'invisible'
             }
           >
@@ -140,7 +140,7 @@ export default function ContactForm() {
           </p>
         </div>
       </div>
-      <div className="w-full flex justify-center mt-16">
+      <div className="mt-16 flex w-full justify-center">
         <Button
           type="submit"
           aria="Send"
@@ -149,7 +149,7 @@ export default function ContactForm() {
           contact={true}
         >
           <svg
-            className="animate-spin h-5 w-5 text-white"
+            className="h-5 w-5 animate-spin text-white"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"

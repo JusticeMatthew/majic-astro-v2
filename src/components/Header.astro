@@ -4,14 +4,14 @@ import navLinks from '@/constants/navLinks';
 import MobileNav from './MobileNav';
 ---
 
-<header class="z-50 sticky top-0 text-dark flex items-center pt-xs -mb-huge">
+<header class="sticky top-0 z-50 -mb-huge flex items-center pt-xs text-dark">
   <div
     id="header"
-    class="flex bg-light p-xs w-full items-center justify-between rounded-lg transition-colors duration-300"
+    class="flex w-full items-center justify-between rounded-lg bg-light p-xs transition-colors duration-300"
   >
-    <a href="/" class="flex gap-2xs cursor-pointer items-center">
+    <a href="/" class="flex cursor-pointer items-center gap-2xs">
       <img src="/images/logo-svg.svg" alt="" width={46} height={46} />
-      <h1 class="text-logo astro-font-calistoga">
+      <h1 class="astro-font-calistoga text-logo">
         <span class="majic">Majic&nbsp;</span>
         <span class="astro-font-inter text-bread">
           | Beautiful Web Solutions
@@ -19,7 +19,7 @@ import MobileNav from './MobileNav';
       </h1>
     </a>
     <MobileNav client:visible />
-    <nav class="hidden sm:flex gap-2xs">
+    <nav class="hidden gap-2xs sm:flex">
       {
         navLinks.map((link) => (
           <ScrollLink to={link[0]} client:load>
