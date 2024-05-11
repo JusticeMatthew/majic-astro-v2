@@ -2,6 +2,9 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 const spacing = {
+  '3xs': 'var(--space-3xs)',
+  '2xs': 'var(--space-2xs)',
+  xs: 'var(--space-xs)',
   small: 'var(--space-s)',
   sm: 'var(--space-s-m)',
   sl: 'var(--space-s-l)',

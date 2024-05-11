@@ -78,8 +78,8 @@
 body {
   font-size: var(--step-0);
   line-height: var(--standard);
-  color: #0d111c;
-  background-color: #d8d7f3;
+  color: #f8fafc;
+  background-color: #20204e;
   overflow-x: clip !important;
   transition-property: all !important;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
@@ -131,14 +131,19 @@ html.lenis body {
   pointer-events: none;
 }
 
-html[data-is-top='true'] header {
+html[data-is-top='true'] #header {
   background-color: rgba(248, 250, 252, 0) !important;
+  color: rgba(248, 250, 252, 0.8);
 }
 
-html[data-is-top='false'] header {
-  box-shadow:
-    0 1px 3px 0 rgb(0 0 0 / 0.1),
-    0 1px 2px -1px rgb(0 0 0 / 0.1);
+html[data-is-top='true'] .majic {
+  color: rgba(248, 250, 252);
+}
+
+html[data-is-top='false'] #header {
+  background-color: rgba(248, 250, 252, 1) !important;
+  color: #0d111c;
+  box-shadow: 0 4px 10px 6px rgb(0 0 0 / 0.3);
 }
 
 .benefit-card {
