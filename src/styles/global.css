@@ -20,10 +20,11 @@
 
 @layer components {
   .text-gradient {
-    @apply text-transparent bg-primary-gradient bg-clip-text;
+    @apply bg-primary-gradient bg-clip-text text-transparent;
   }
+
   .text-gradient-parallax {
-    @apply text-transparent bg-parallax-gradient bg-clip-text;
+    @apply bg-parallax-gradient bg-clip-text text-transparent;
   }
 
   .form-container {
@@ -31,15 +32,15 @@
   }
 
   .form-label {
-    @apply font-semibold;
+    @apply font-medium text-[var(--step-00)];
   }
 
   .form-input {
-    @apply mt-2 w-full h-12 sm:h-14 p-3 rounded-lg bg-slate-200 focus:outline-none;
+    @apply mt-2 h-12 w-full rounded-lg bg-slate-200 p-3 focus:outline-none sm:h-14;
   }
 
   .form-textarea {
-    @apply resize-none w-full h-56 sm:h-[19.5rem] p-3 rounded-lg bg-slate-200 focus:outline-none mt-2;
+    @apply mt-2 h-56 w-full resize-none rounded-lg bg-slate-200 p-3 focus:outline-none sm:h-[19.5rem];
   }
 }
 
@@ -64,6 +65,7 @@
   --space-m: clamp(1.5rem, 1.3843rem + 0.5607vi, 1.875rem);
   --space-m-l: clamp(1.5rem, 1.2687rem + 1.1215vi, 2.25rem);
   --space-l: clamp(2rem, 1.8458rem + 0.7477vi, 2.5rem);
+  --space-l-xl: clamp(2rem, 1.5759rem + 2.0561vi, 3.375rem);
   --space-xl: clamp(3rem, 2.7687rem + 1.1215vi, 3.75rem);
   --space-2xl: clamp(4rem, 3.6916rem + 1.4953vi, 5rem);
   --space-3xl: clamp(6rem, 5.5374rem + 2.243vi, 7.5rem);
@@ -134,24 +136,20 @@ html.lenis body {
 html[data-is-top='true'] #header {
   background-color: rgba(248, 250, 252, 0) !important;
   color: rgba(248, 250, 252, 0.8);
-}
 
-html[data-is-top='true'] .majic {
-  color: rgba(248, 250, 252);
+  & #burger {
+    background-color: rgba(248, 250, 252, 0.8);
+  }
 }
 
 html[data-is-top='false'] #header {
   background-color: rgba(248, 250, 252, 1) !important;
   color: #0d111c;
   box-shadow: 0 4px 10px 6px rgb(0 0 0 / 0.3);
-}
 
-.benefit-card {
-  perspective: 1000px;
-}
-
-.benefit-card img div p span {
-  transform-style: preserve-3d;
+  & #burger {
+    background-color: #0d111c;
+  }
 }
 
 .flashing-text {
