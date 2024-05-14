@@ -4,13 +4,17 @@ import navLinks from '@/constants/navLinks';
 import MobileNav from './MobileNav';
 ---
 
-<header class="sticky top-0 z-50 -mb-lh flex items-center pt-xs text-dark">
+<header class="sticky top-0 z-50 -mb-lh flex items-center pt-xs">
   <div
     id="header"
-    class="flex w-full items-center justify-between rounded-lg bg-light p-xs transition-colors duration-300"
+    class="transition-[color, box-shadow, backdrop-filter, background-image] flex w-full items-center justify-between rounded-lg p-xs duration-300"
   >
     <a href="/" class="flex cursor-pointer items-center gap-2xs">
-      <img src="/images/logo-svg.svg" alt="" width={46} height={46} />
+      <div
+        id="logo"
+        class="transition-[color, box-shadow, backdrop-filter, background-image] h-11 w-11 duration-300"
+      >
+      </div>
       <h1 class="astro-font-calistoga text-logo">
         <span class="majic">Majic&nbsp;</span>
         <span class="astro-font-inter text-bread">

@@ -1,3 +1,14 @@
-<div class="my-huge grid w-full grid-cols-3 grid-rows-2">
-  <div id="mask" class="col-span-1 h-40 w-full bg-light-purple">test</div>
+---
+const masks = ['mask0', 'mask1', 'mask2', 'mask3', 'mask4', 'mask5'];
+---
+
+<div class="grid w-full grid-cols-3 grid-rows-2">
+  {
+    masks.map((mask, i) => (
+      <div
+        id="mask"
+        class="col-span-1 flex h-40 w-full items-center justify-center bg-light-purple"
+      />
+    ))
+  }
 </div>

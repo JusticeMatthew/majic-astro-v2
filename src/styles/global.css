@@ -98,6 +98,12 @@ label {
   line-height: 1.1;
 }
 
+header {
+  max-width: clamp(16rem, 100%, 99.5rem);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
 #container {
   max-width: clamp(16rem, 100%, 87.5rem);
   margin: 0 auto;
@@ -120,11 +126,17 @@ label {
   );
 }
 
+#color-picker {
+  color: #c3c3ff;
+}
+
 #mask {
   mask:
-    url('../../public/icons/wand.svg') center/contain no-repeat,
+    url('/icons/wand.svg') left top/contain no-repeat,
     linear-gradient(#000 0 0);
   mask-composite: exclude;
+  mask-size: 20%;
+  mask-position: 20px 20px;
 }
 
 .balanced {
@@ -162,20 +174,37 @@ html.lenis body {
 
 html[data-is-top='true'] #header {
   background-color: rgba(248, 250, 252, 0) !important;
-  color: rgba(248, 250, 252, 0.8);
+  color: rgba(248, 250, 252, 0.9);
 
   & #burger {
     background-color: rgba(248, 250, 252, 0.8);
+  }
+
+  & #logo {
+    background-image: url('/images/logo-light.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 90;
   }
 }
 
 html[data-is-top='false'] #header {
   background-color: rgba(248, 250, 252, 1) !important;
-  color: #0d111c;
-  box-shadow: 0 4px 10px 6px rgb(0 0 0 / 0.3);
+  color: #18183b;
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  backdrop-filter: blur(24px);
 
   & #burger {
     background-color: #0d111c;
+  }
+
+  & #logo {
+    background-image: url('/images/logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 90;
   }
 }
 
