@@ -58,11 +58,9 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
     const fixedWidth = parseInt(
       containerWidth.slice(0, containerWidth.length - 2),
     );
-    console.log({ 'Window Width': inner }, { 'Container Width': fixedWidth });
 
     const gradientStart = `${(inner - fixedWidth) / 2 + 25}px`;
     const gradientEnd = `${inner - (inner - fixedWidth) / 2 - 35}px`;
-    console.log(gradientEnd);
 
     document.documentElement.style.setProperty(
       '--gradient-start',
