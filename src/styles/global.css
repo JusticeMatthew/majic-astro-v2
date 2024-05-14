@@ -69,12 +69,13 @@
   --space-xl: clamp(3rem, 2.7687rem + 1.1215vi, 3.75rem);
   --space-2xl: clamp(4rem, 3.6916rem + 1.4953vi, 5rem);
   --space-3xl: clamp(6rem, 5.5374rem + 2.243vi, 7.5rem);
-  --space-4xl: clamp(8rem, 7.3832rem + 2.9907vi, 10rem);
+  --space-4xl: clamp(8rem, 7.3832rem + 2.9907cqi, 10rem);
 
   --flat: 1;
   --fine: 1.15;
   --standard: 1.5;
   --loose: 1.7;
+  --benefits-width: clamp(16rem, 100%, 87.5rem);
 }
 
 body {
@@ -101,11 +102,37 @@ label {
   max-width: clamp(16rem, 100%, 87.5rem);
   margin: 0 auto;
   padding: 0 1.5rem;
-  position: relative;
+  position: static;
+}
+
+#benefits {
+  width: clamp(16rem, 100%, 87.5rem);
+  padding: 0 1.5rem;
+}
+
+#bg-mask {
+  background-image: linear-gradient(
+    90deg,
+    #bbbbff var(--gradient-start),
+    transparent var(--gradient-start),
+    transparent var(--gradient-end),
+    #bbbbff var(--gradient-end)
+  );
+}
+
+#mask {
+  mask:
+    url('icons/wand.svg') center/contain no-repeat,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
 }
 
 .balanced {
   text-wrap: balance;
+}
+
+.pretty {
+  text-wrap: pretty;
 }
 
 .nowrap {
@@ -153,7 +180,7 @@ html[data-is-top='false'] #header {
 }
 
 .flashing-text {
-  background: linear-gradient(90deg, #735cdd, #00a7e1, #ff9299, #735cdd) 0 0 /
+  background: linear-gradient(90deg, #735cdd, #00a7e1, #ff64f5, #735cdd) 0 0 /
     500% 100%;
   color: transparent;
   -webkit-background-clip: text;

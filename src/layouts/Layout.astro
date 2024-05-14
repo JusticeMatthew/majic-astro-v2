@@ -95,7 +95,9 @@ import GradientBG from '@/components/GradientBG.astro';
 
       gsap.from('#content-about', {
         opacity: 0,
+        x: -75,
         duration: 1,
+        delay: 0.1,
         stagger: 0.3,
         scrollTrigger: { trigger: '#content-about', start: 'bottom bottom' },
       });
@@ -104,7 +106,7 @@ import GradientBG from '@/components/GradientBG.astro';
 
   <body>
     <GradientBG />
-    <div id="container" class="relative max-lg:overflow-x-clip">
+    <div id="container" class="main-container max-lg:overflow-x-clip">
       <Header />
       <slot />
     </div>

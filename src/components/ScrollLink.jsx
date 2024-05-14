@@ -6,7 +6,7 @@ export default function ScrollLink({ children, to }) {
       href="/"
       to={to}
       activeClass="bg-bottom bg-[length:100%_6px]"
-      offset={-100}
+      offset={-300}
       spy={true}
       smooth={true}
       isDynamic={true}

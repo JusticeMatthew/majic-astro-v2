@@ -34,7 +34,7 @@ module.exports = {
         min: 'var(--step-00)',
         bread: 'var(--step-0)',
         subTitle: 'var(--step-2)',
-        title: 'var(--step-4)',
+        title: 'var(--step-5)',
         headline: 'var(--step-6)',
       },
       fontFamily: {
@@ -43,6 +43,8 @@ module.exports = {
       },
       colors: {
         blurple: '#6287FF',
+        'light-purple': '#bbbbff',
+        'dark-purple': '#20204e',
         light: '#F8FAFC',
         dark: '#0D111C',
       },
