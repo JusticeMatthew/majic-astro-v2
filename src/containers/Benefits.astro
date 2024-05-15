@@ -1,14 +1,22 @@
 ---
-const masks = ['mask0', 'mask1', 'mask2', 'mask3', 'mask4', 'mask5'];
+import benefits from '@/constants/benefits';
 ---
 
-<div class="grid w-full grid-cols-3 grid-rows-2">
+<div class="z-20 grid w-full grid-cols-3 grid-rows-2">
   {
-    masks.map((mask, i) => (
+    benefits.map(({ maskId, title, content, top }) => (
       <div
-        id="mask"
-        class="col-span-1 flex h-40 w-full items-center justify-center bg-light-purple"
-      />
+        id={maskId}
+        class="mask col-span-1 w-full bg-light-purple text-dark-purple"
+      >
+        <div class="relative mb-[6.5rem] mt-40">
+          <span class="absolute h-[2.15rem] w-1 rounded-lg bg-blurple" />
+          <div class="ml-6">
+            <p class="font-small mb-3 text-subTitle font-semibold">{title}</p>
+            <p class="balanced">{content}</p>
+          </div>
+        </div>
+      </div>
     ))
   }
 </div>

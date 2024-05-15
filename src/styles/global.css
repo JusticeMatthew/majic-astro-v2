@@ -99,9 +99,8 @@ label {
 }
 
 header {
-  max-width: clamp(16rem, 100%, 99.5rem);
+  max-width: clamp(16rem, 100%, 91.5rem);
   margin: 0 auto;
-  padding: 0 1.5rem;
 }
 
 #container {
@@ -113,7 +112,8 @@ header {
 
 #benefits {
   width: clamp(16rem, 100%, 87.5rem);
-  padding: 0 1.5rem;
+  padding-right: 1.5rem;
+  padding-left: 1rem;
 }
 
 #bg-mask {
@@ -126,17 +126,57 @@ header {
   );
 }
 
-#color-picker {
-  color: #c3c3ff;
+.mask {
+  min-height: 15rem;
+  mask-position: 1.5rem 6rem !important;
 }
 
-#mask {
+#mask1 {
   mask:
     url('/icons/wand.svg') left top/contain no-repeat,
     linear-gradient(#000 0 0);
   mask-composite: exclude;
-  mask-size: 20%;
-  mask-position: 20px 20px;
+  mask-size: 40px;
+}
+
+#mask2 {
+  mask:
+    url('/icons/seo.svg') left top/contain no-repeat,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  mask-size: 40px;
+}
+
+#mask3 {
+  mask:
+    url('/icons/camera.svg') left top/contain no-repeat,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  mask-size: 38px;
+}
+
+#mask4 {
+  mask:
+    url('/icons/bag.svg') left top/contain no-repeat,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  mask-size: 35px;
+}
+
+#mask5 {
+  mask:
+    url('/icons/robot.svg') left top/contain no-repeat,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  mask-size: 50px;
+}
+
+#mask6 {
+  mask:
+    url('/icons/wand.svg') left top/contain no-repeat,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  mask-size: 40px;
 }
 
 .balanced {
@@ -194,7 +234,6 @@ html[data-is-top='false'] #header {
   box-shadow:
     0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
-  backdrop-filter: blur(24px);
 
   & #burger {
     background-color: #0d111c;

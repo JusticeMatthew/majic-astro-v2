@@ -6,7 +6,7 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
 
 <section id="about" class="my-2x w-full">
   <div
-    class="flex w-full flex-col-reverse justify-between gap-2x tablet:flex-row"
+    class="mb-huge flex w-full flex-col-reverse justify-between gap-2x tablet:flex-row"
   >
     <div
       class="flex flex-col max-tablet:items-center max-tablet:justify-center max-tablet:text-center"
@@ -59,7 +59,7 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
       containerWidth.slice(0, containerWidth.length - 2),
     );
 
-    const gradientStart = `${(inner - fixedWidth) / 2 + 25}px`;
+    const gradientStart = `${(inner - fixedWidth) / 2 + 16}px`;
     const gradientEnd = `${inner - (inner - fixedWidth) / 2 - 35}px`;
 
     document.documentElement.style.setProperty(

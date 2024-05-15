@@ -1,30 +1,39 @@
 const benefits = [
   {
-    icon: '/icons/web-design-icon.svg',
-    alt: 'web page icon',
-    topText: 'Enchanting',
-    bottomText: 'web design',
+    maskId: 'mask1',
+    title: 'Enchanting web design',
     content:
-      'We design and develop stunning, user-friendly websites that showcase your brand and boost online growth',
-    timing: 0,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
-    icon: '/icons/video-editing-icon.svg',
-    alt: 'film icon',
-    topText: 'Captivating',
-    bottomText: 'video editing',
+    maskId: 'mask2',
+    title: 'Search engine optimization',
     content:
-      'Build trust with customers by providing them a clear and exciting video about your services',
-    timing: 0.6,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
-    icon: '/icons/social-media-icon.svg',
-    alt: 'profile card icon',
-    topText: 'Spellbinding',
-    bottomText: 'social media',
+    maskId: 'mask3',
+    title: 'Photography & Videography',
     content:
-      'Our social media services keep your customers informed and up to date about specials, offers, and more',
-    timing: 1.2,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    maskId: 'mask5',
+    title: 'Powerful AI tools',
+    content:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    maskId: 'mask4',
+    title: 'Spellbinding online stores',
+    content:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    maskId: 'mask6',
+    title: 'test',
+    content:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
 ];
 

@@ -25,6 +25,7 @@ module.exports = {
     extend: {
       screens: {
         tablet: '1025px',
+        container: '1400px',
       },
       padding: spacing,
       margin: spacing,
@@ -33,7 +34,7 @@ module.exports = {
         logo: ['var(--step-1)', 'var(--fine)'],
         min: 'var(--step-00)',
         bread: 'var(--step-0)',
-        subTitle: 'var(--step-2)',
+        subTitle: 'var(--step-1)',
         title: 'var(--step-5)',
         headline: 'var(--step-6)',
       },
@@ -50,6 +51,7 @@ module.exports = {
       },
       backgroundImage: {
         'primary-gradient': 'linear-gradient(to right, #735CDD, #00A7E1)',
+        'secondary-gradient': 'linear-gradient(#735CDD, #00A7E1)',
         'parallax-gradient':
           'linear-gradient(to right, #735CDD, #00A7E1, #735CDD)',
       },

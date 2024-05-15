@@ -1,9 +1,1 @@
-<svg width="128" height="117" viewBox="0 0 128 117" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.125 61.8125L53.125 101.812L113.125 11.8125" stroke="url(#paint0_linear_374_231)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear_374_231" x1="-6.24008" y1="57.3298" x2="205.665" y2="57.3298" gradientUnits="userSpaceOnUse">
-<stop stop-color="#735CDD"/>
-<stop offset="1" stop-color="#00A7E1"/>
-</linearGradient>
-</defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" fill="#6287FF"/></svg>
