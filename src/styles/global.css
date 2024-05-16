@@ -45,37 +45,48 @@
 }
 
 :root {
-  --step-00: clamp(0.844rem, 0.8533rem + -0.0106vi, 0.8511rem);
-  --step-0: clamp(1rem, 0.9614rem + 0.1869vi, 1.125rem);
-  --step-1: clamp(1.175rem, 1.0749rem + 0.4854vi, 1.4996rem);
-  --step-2: clamp(1.3806rem, 1.1899rem + 0.9247vi, 1.999rem);
-  --step-3: clamp(1.6222rem, 1.3007rem + 1.5588vi, 2.6647rem);
-  --step-4: clamp(1.9061rem, 1.3985rem + 2.4611vi, 3.552rem);
-  --step-5: clamp(2.2397rem, 1.4702rem + 3.731vi, 4.7348rem);
-  --step-6: clamp(2.6316rem, 1.4967rem + 5.5026vi, 6.3115rem);
-  --step-7: clamp(3.0922rem, 1.4511rem + 7.9567vi, 8.4132rem);
-  --step-8: clamp(3.6333rem, 1.2951rem + 11.3369vi, 11.2149rem);
+  --step-00: clamp(0.8333rem, 0.8302rem + 0.0153vi, 0.844rem);
+  --step-0: clamp(1rem, 0.9628rem + 0.1802vi, 1.125rem);
+  --step-1: clamp(1.2rem, 1.1109rem + 0.4319vi, 1.4996rem);
+  --step-2: clamp(1.44rem, 1.2738rem + 0.8058vi, 1.999rem);
+  --step-3: clamp(1.728rem, 1.4495rem + 1.3502vi, 2.6647rem);
+  --step-4: clamp(2.0736rem, 1.6341rem + 2.131vi, 3.552rem);
+  --step-5: clamp(2.4883rem, 1.8204rem + 3.2382vi, 4.7348rem);
+  --step-6: clamp(2.986rem, 1.9973rem + 4.7936vi, 6.3115rem);
+  --step-7: clamp(3.5832rem, 2.1472rem + 6.9623vi, 8.4132rem);
+  --step-8: clamp(4.2998rem, 2.244rem + 9.9676vi, 11.2149rem);
 
-  --space-3xs: clamp(0.25rem, 0.2307rem + 0.0935vi, 0.3125rem);
-  --space-2xs: clamp(0.5rem, 0.4614rem + 0.1869vi, 0.625rem);
-  --space-xs: clamp(0.75rem, 0.6922rem + 0.2804vi, 0.9375rem);
-  --space-s: clamp(1rem, 0.9229rem + 0.3738vi, 1.25rem);
-  --space-s-m: clamp(1rem, 0.788rem + 1.028vi, 1.6875rem);
-  --space-s-l: clamp(1rem, 0.6145rem + 1.8692vi, 2.25rem);
-  --space-m: clamp(1.5rem, 1.3843rem + 0.5607vi, 1.875rem);
-  --space-m-l: clamp(1.5rem, 1.2687rem + 1.1215vi, 2.25rem);
-  --space-l: clamp(2rem, 1.8458rem + 0.7477vi, 2.5rem);
-  --space-l-xl: clamp(2rem, 1.5759rem + 2.0561vi, 3.375rem);
-  --space-xl: clamp(3rem, 2.7687rem + 1.1215vi, 3.75rem);
-  --space-2xl: clamp(4rem, 3.6916rem + 1.4953vi, 5rem);
-  --space-3xl: clamp(6rem, 5.5374rem + 2.243vi, 7.5rem);
-  --space-4xl: clamp(8rem, 7.3832rem + 2.9907cqi, 10rem);
+  --space-3xs: clamp(0.25rem, 0.2314rem + 0.0901vi, 0.3125rem);
+  --space-2xs: clamp(0.5rem, 0.4814rem + 0.0901vi, 0.5625rem);
+  --space-xs: clamp(0.75rem, 0.7128rem + 0.1802vi, 0.875rem);
+  --space-s: clamp(1rem, 0.9628rem + 0.1802vi, 1.125rem);
+  --space-m: clamp(1.5rem, 1.4443rem + 0.2703vi, 1.6875rem);
+  --space-l: clamp(2rem, 1.9257rem + 0.3604vi, 2.25rem);
+  --space-xl: clamp(3rem, 2.8885rem + 0.5405vi, 3.375rem);
+  --space-2xl: clamp(4rem, 3.8514rem + 0.7207vi, 4.5rem);
+  --space-3xl: clamp(6rem, 5.777rem + 1.0811vi, 6.75rem);
+  --space-4xl: clamp(8rem, 7.7027rem + 1.4414vi, 9rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.25rem, 0.1571rem + 0.4505vi, 0.5625rem);
+  --space-2xs-xs: clamp(0.5rem, 0.3885rem + 0.5405vi, 0.875rem);
+  --space-xs-s: clamp(0.75rem, 0.6385rem + 0.5405vi, 1.125rem);
+  --space-s-m: clamp(1rem, 0.7956rem + 0.991vi, 1.6875rem);
+  --space-m-l: clamp(1.5rem, 1.277rem + 1.0811vi, 2.25rem);
+  --space-l-xl: clamp(2rem, 1.5912rem + 1.982vi, 3.375rem);
+  --space-xl-2xl: clamp(3rem, 2.5541rem + 2.1622vi, 4.5rem);
+  --space-2xl-3xl: clamp(4rem, 3.1824rem + 3.964vi, 6.75rem);
+  --space-3xl-4xl: clamp(6rem, 5.1081rem + 4.3243vi, 9rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(1rem, 0.6284rem + 1.8018vi, 2.25rem);
+  --space-s-xl: clamp(1rem, 0.2939rem + 3.4234vi, 3.375rem);
+  --space-m-xl: clamp(1.5rem, 0.9426rem + 2.7027vi, 3.375rem);
 
   --flat: 1;
   --fine: 1.15;
   --standard: 1.5;
   --loose: 1.7;
-  --benefits-width: clamp(16rem, 100%, 87.5rem);
 }
 
 body {
@@ -99,19 +110,19 @@ label {
 }
 
 header {
-  max-width: clamp(16rem, 100%, 91.5rem);
+  max-width: clamp(16rem, 100%, 94rem);
   margin: 0 auto;
 }
 
 #container {
-  max-width: clamp(16rem, 100%, 87.5rem);
+  max-width: clamp(16rem, 100%, 90rem);
   margin: 0 auto;
   padding: 0 1.5rem;
   position: static;
 }
 
 #benefits {
-  width: clamp(16rem, 100%, 87.5rem);
+  width: clamp(16rem, 100%, 90rem);
   padding-right: 1.5rem;
   padding-left: 1rem;
 }

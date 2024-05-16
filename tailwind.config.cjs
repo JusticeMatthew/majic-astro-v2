@@ -51,7 +51,7 @@ module.exports = {
       },
       backgroundImage: {
         'primary-gradient': 'linear-gradient(to right, #735CDD, #00A7E1)',
-        'secondary-gradient': 'linear-gradient(#735CDD, #00A7E1)',
+        'secondary-gradient': 'linear-gradient(to right, #8B72FF, #608CFF)',
         'parallax-gradient':
           'linear-gradient(to right, #735CDD, #00A7E1, #735CDD)',
       },
