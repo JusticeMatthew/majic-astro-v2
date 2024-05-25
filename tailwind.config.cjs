@@ -16,6 +16,8 @@ const spacing = {
   '2x': 'var(--space-2xl)',
   '3x': 'var(--space-3xl)',
   '4x': 'var(--space-4xl)',
+  '5x': 'var(--space-5xl)',
+  section: 'var(--space-5xl-7xl)',
 };
 
 module.exports = {

@@ -4,20 +4,20 @@ import Benefits from './Benefits.astro';
 import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
 ---
 
-<section id="about" class="my-2x w-full">
+<section id="about" class="mb-section mt-5x w-full">
   <div
-    class="container mb-huge flex flex-col-reverse justify-between gap-2x tablet:flex-row"
+    class="container mb-16 flex flex-col-reverse justify-between gap-2x tablet:flex-row"
   >
     <div
       class="flex flex-col max-tablet:items-center max-tablet:justify-center max-tablet:text-center"
     >
       <h3
         id="content-about"
-        class="balanced mb-medium font-cursive text-title drop-shadow"
+        class="balanced mb-6 font-cursive text-title drop-shadow"
       >
         Running your own business is tough enough
       </h3>
-      <p id="content-about" class="pretty my-medium max-w-[50ch]">
+      <p id="content-about" class="pretty my-6 max-w-[50ch]">
         That&apos;s why Majic wants to provide a one-stop shop for businesses
         who need worry free web design & development services at a fair rate.
       </p>
@@ -25,13 +25,13 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
         <Button
           client:visible
           aria="See our affordable pricing"
-          margin="mt-sm max-w-min"
+          margin="mt-6 max-w-min"
         >
           See our affordable pricing
         </Button>
       </div>
     </div>
-    <div class="w-full max-w-[40rem] translate-y-2 max-tablet:mx-auto">
+    <div class="w-full max-w-[40rem] translate-y-4 max-tablet:mx-auto">
       <LottieAnimation src="animations/workingV2.json" autoplay="visible" />
     </div>
   </div>

@@ -84,15 +84,6 @@ import GradientBG from '@/components/GradientBG.astro';
 
       gsap.registerPlugin(ScrollTrigger);
 
-      gsap.from('#content-cta', {
-        opacity: 0,
-        duration: 1,
-        x: -75,
-        stagger: 0.3,
-        delay: 0.2,
-        scrollTrigger: { trigger: '#content-cta', start: 'bottom bottom' },
-      });
-
       gsap.from('#content-about', {
         opacity: 0,
         x: -75,
@@ -100,6 +91,15 @@ import GradientBG from '@/components/GradientBG.astro';
         delay: 0.1,
         stagger: 0.3,
         scrollTrigger: { trigger: '#content-about', start: 'bottom bottom' },
+      });
+
+      gsap.from('#content-cta', {
+        opacity: 0,
+        duration: 1,
+        x: -75,
+        stagger: 0.3,
+        delay: 0.2,
+        scrollTrigger: { trigger: '#content-cta', start: 'bottom bottom' },
       });
     </script></head
   >

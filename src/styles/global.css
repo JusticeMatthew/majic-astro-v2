@@ -66,6 +66,7 @@
   --space-2xl: clamp(4rem, 3.8514rem + 0.7207vi, 4.5rem);
   --space-3xl: clamp(6rem, 5.777rem + 1.0811vi, 6.75rem);
   --space-4xl: clamp(8rem, 7.7027rem + 1.4414vi, 9rem);
+  --space-5xl: clamp(10rem, 9.6284rem + 1.8018vi, 11.25rem);
 
   /* One-up pairs */
   --space-3xs-2xs: clamp(0.25rem, 0.1571rem + 0.4505vi, 0.5625rem);
@@ -77,6 +78,7 @@
   --space-xl-2xl: clamp(3rem, 2.5541rem + 2.1622vi, 4.5rem);
   --space-2xl-3xl: clamp(4rem, 3.1824rem + 3.964vi, 6.75rem);
   --space-3xl-4xl: clamp(6rem, 5.1081rem + 4.3243vi, 9rem);
+  --space-5xl-7xl: clamp(10rem, 6.2838rem + 18.018vi, 22.5rem);
 
   /* Custom pairs */
   --space-s-l: clamp(1rem, 0.6284rem + 1.8018vi, 2.25rem);
