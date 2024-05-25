@@ -123,6 +123,10 @@ header {
   padding: 0 1.5rem;
 }
 
+#benefits {
+  grid-template-rows: repeat(2, minmax(0, auto));
+}
+
 #benefits::before {
   height: 100%;
   width: 100vw;
@@ -142,8 +146,11 @@ header {
 }
 
 .mask {
-  min-height: 15rem;
-  mask-position: 3rem 6rem !important;
+  mask-position: 3rem 7rem !important;
+}
+
+.mask2 {
+  mask-position: 3rem 2rem !important;
 }
 
 #mask1 {

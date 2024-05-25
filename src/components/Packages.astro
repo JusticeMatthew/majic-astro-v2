@@ -7,7 +7,7 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
 <section class="h-[min(auto, 60vh)] relative mb-3x flex flex-col items-center">
   <div class="flex w-full flex-col justify-between">
     <CombinedServices client:visible />
-    <div class="mt-medium hidden grid-cols-3 gap-medium tablet:grid">
+    <div class="mt-medium hidden grid-cols-3 gap-6 tablet:grid">
       {
         pricingPlans.map((plan) => (
           <div
@@ -17,7 +17,7 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
           >
             {plan.recommended && (
               <div class="absolute -top-4 left-0 flex w-full justify-center text-center text-light">
-                <p class="w-fit rounded-full bg-primary-gradient px-huge py-1 font-medium">
+                <p class="w-fit rounded-full bg-secondary-gradient px-huge py-1 font-medium">
                   Most Popular
                 </p>
               </div>
