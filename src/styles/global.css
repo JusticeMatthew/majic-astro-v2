@@ -112,34 +112,36 @@ label {
 header {
   max-width: clamp(16rem, 100%, 94rem);
   margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-#container {
+.container {
   max-width: clamp(16rem, 100%, 90rem);
   margin: 0 auto;
   padding: 0 1.5rem;
-  position: static;
 }
 
-#benefits {
-  width: clamp(16rem, 100%, 90rem);
-  padding-right: 1.5rem;
-  padding-left: 1rem;
+#benefits::before {
+  height: 100%;
+  width: 100vw;
+  left: -100vw;
+  background-color: #bbbbff;
+  content: '';
+  position: absolute;
 }
 
-#bg-mask {
-  background-image: linear-gradient(
-    90deg,
-    #bbbbff var(--gradient-start),
-    transparent var(--gradient-start),
-    transparent var(--gradient-end),
-    #bbbbff var(--gradient-end)
-  );
+#benefits::after {
+  height: 100%;
+  width: 100vw;
+  right: -100vw;
+  background-color: #bbbbff;
+  content: '';
+  position: absolute;
 }
 
 .mask {
   min-height: 15rem;
-  mask-position: 1.5rem 6rem !important;
+  mask-position: 3rem 6rem !important;
 }
 
 #mask1 {

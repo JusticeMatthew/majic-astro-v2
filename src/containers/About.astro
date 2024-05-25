@@ -6,7 +6,7 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
 
 <section id="about" class="my-2x w-full">
   <div
-    class="mb-huge flex w-full flex-col-reverse justify-between gap-2x tablet:flex-row"
+    class="container mb-huge flex flex-col-reverse justify-between gap-2x tablet:flex-row"
   >
     <div
       class="flex flex-col max-tablet:items-center max-tablet:justify-center max-tablet:text-center"
@@ -17,7 +17,7 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
       >
         Running your own business is tough enough
       </h3>
-      <p id="content-about" class="my-medium max-w-[55ch]">
+      <p id="content-about" class="pretty my-medium max-w-[50ch]">
         That&apos;s why Majic wants to provide a one-stop shop for businesses
         who need worry free web design & development services at a fair rate.
       </p>
@@ -35,41 +35,5 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
       <LottieAnimation src="animations/workingV2.json" autoplay="visible" />
     </div>
   </div>
-  <div
-    id="bg-mask"
-    class="absolute left-0 z-0 my-2x flex w-screen items-center justify-center"
-  >
-    <div id="benefits">
-      <Benefits />
-    </div>
-  </div>
-  <div class="invisible z-10 my-2x flex items-center justify-center">
-    <Benefits />
-  </div>
+  <Benefits />
 </section>
-
-<script>
-  const container = document.querySelector('.main-container');
-
-  function updateGradientStop() {
-    const inner = window.innerWidth;
-    const containerWidth = window.getComputedStyle(container).width;
-
-    const fixedWidth = parseInt(
-      containerWidth.slice(0, containerWidth.length - 2),
-    );
-
-    const gradientStart = `${(inner - fixedWidth) / 2 + 16}px`;
-    const gradientEnd = `${inner - (inner - fixedWidth) / 2 - 35}px`;
-
-    document.documentElement.style.setProperty(
-      '--gradient-start',
-      gradientStart,
-    );
-    document.documentElement.style.setProperty('--gradient-end', gradientEnd);
-  }
-
-  window.addEventListener('resize', updateGradientStop);
-
-  updateGradientStop();
-</script>

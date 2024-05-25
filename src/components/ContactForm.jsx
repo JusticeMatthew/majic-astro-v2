@@ -51,7 +51,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit(sendEmail)}
-      className="flex w-full flex-col text-dark"
+      className="flex w-full flex-col text-dark-purple"
     >
       <div className="min-h-96 flex w-full flex-col sm:flex-row sm:gap-16 md:gap-24">
         <div className="mt-16 w-full">
