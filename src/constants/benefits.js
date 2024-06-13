@@ -22,7 +22,7 @@ const benefits = [
   [
     {
       maskId: 'mask5',
-      title: 'Powerful AI tools',
+      title: 'Latest AI technology',
       content:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },

@@ -270,7 +270,7 @@ html[data-is-top='false'] #header {
 }
 
 .flashing-text {
-  background: linear-gradient(90deg, #735cdd, #00a7e1, #ff64f5, #735cdd) 0 0 /
+  background: linear-gradient(90deg, #735bdc, #00a7e1, #ff64f5, #735cdd) 0 0 /
     500% 100%;
   color: transparent;
   -webkit-background-clip: text;

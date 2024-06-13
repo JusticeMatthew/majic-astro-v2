@@ -38,7 +38,7 @@ export const pricingPlans = [
       'Google Business listing',
       'Secure hosting & maintenance',
       'Company email addresses',
-      'Shopify e-commerce platform',
+      'Modern e-commerce platform',
     ],
     price: '$2,000',
     monthly: '+ $200 per month',

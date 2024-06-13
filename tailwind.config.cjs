@@ -47,6 +47,7 @@ module.exports = {
       },
       colors: {
         blurple: '#6287FF',
+        'light-gray': '#E8EAEF',
         'light-purple': '#bbbbff',
         'dark-purple': '#20204e',
         light: '#F8FAFC',
