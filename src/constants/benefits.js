@@ -4,19 +4,19 @@ const benefits = [
       maskId: 'mask1',
       title: 'Enchanting web design',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Transform your vision into a stunning, user-friendly website that captivates and engages your audience.',
     },
     {
       maskId: 'mask2',
       title: 'Search engine optimization',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        "Improve your website's search engine performance and drive organic growth with our SEO expertise.",
     },
     {
       maskId: 'mask3',
       title: 'Photography & Videography',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Bring your brand to life with stunning visuals that consistently engage and inspire your audience while telling your story.',
     },
   ],
   [
@@ -24,19 +24,19 @@ const benefits = [
       maskId: 'mask5',
       title: 'Latest AI technology',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        "Harness the power of the latest AI technology to enhance your website's performance and user experience.",
     },
     {
       maskId: 'mask4',
       title: 'Spellbinding online stores',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Craft a mesmerizing online store with a shopping experience that keeps customers coming back for more.',
     },
     {
       maskId: 'mask6',
-      title: 'test',
+      title: 'Charmed content creation',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Streamline your content management process with our magically easy solutions for updates and edits.',
     },
   ],
 ];

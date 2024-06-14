@@ -195,10 +195,10 @@ header {
 
 #mask6 {
   mask:
-    url('/icons/wand.svg') left top/contain no-repeat,
+    url('/icons/scroll.svg') left top/contain no-repeat,
     linear-gradient(#000 0 0);
   mask-composite: exclude;
-  mask-size: 40px;
+  mask-size: 45px;
 }
 
 .balanced {
@@ -287,4 +287,8 @@ html[data-is-top='false'] #header {
       background-position: 500% 0;
     }
   }
+}
+
+.test {
+  color: #f0c7ed;
 }

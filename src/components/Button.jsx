@@ -23,7 +23,9 @@ export default function Button({
             : 'bg-secondary-gradient'
         }`}
       ></div>
-      <span className="nowrap relative z-20 block rounded-lg px-huge py-small font-medium group-hover:bg-dark group-hover:text-light">
+      <span
+        className={`nowrap relative z-20 block rounded-lg ${contact ? 'px-36' : 'px-huge'} py-small font-medium group-hover:bg-dark group-hover:text-light`}
+      >
         {children}
       </span>
     </button>
