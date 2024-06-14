@@ -28,7 +28,7 @@ import MobileNav from './MobileNav';
     <nav class="hidden gap-2xs sm:flex">
       {
         navLinks.map((link) => (
-          <ScrollLink to={link[0]} client:load>
+          <ScrollLink to={link[0]} client:load nav={true}>
             {link[1]}
           </ScrollLink>
         ))

@@ -1,6 +1,6 @@
 import { Link } from 'react-scroll';
 
-export default function ScrollLink({ children, to }) {
+export default function ScrollLink({ children, to, nav }) {
   return (
     <Link
       href="/"
@@ -11,7 +11,7 @@ export default function ScrollLink({ children, to }) {
       smooth={true}
       isDynamic={true}
       duration={500}
-      className="cursor-pointer rounded-lg bg-secondary-gradient bg-[length:100%_0%] bg-bottom bg-no-repeat px-3 py-2 text-lg transition-[background-size] hover:bg-[length:100%_100%] hover:text-light"
+      className={`${nav ? 'cursor-pointer rounded-lg bg-secondary-gradient bg-[length:100%_0%] bg-bottom bg-no-repeat px-3 py-2 text-lg transition-[background-size] hover:bg-[length:100%_100%] hover:text-light' : ''}`}
       alt={to}
     >
       {children}

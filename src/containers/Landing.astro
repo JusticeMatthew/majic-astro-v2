@@ -1,5 +1,6 @@
 ---
 import Button from '@/components/Button';
+import ScrollLink from '@/components/ScrollLink';
 ---
 
 <section
@@ -17,11 +18,15 @@ import Button from '@/components/Button';
     memorable experience for your audience.
   </p>
   <div class="mt-6 flex flex-col gap-6 sm:flex-row">
-    <Button client:load aria="Connect with us today">
-      Connect with us today
-    </Button>
-    <Button client:load secondary={true} aria="More about Majic">
-      More about Majic
-    </Button>
+    <ScrollLink to="contact" nav={false} client:load>
+      <Button client:load aria="Connect with us today">
+        Connect with us today
+      </Button>
+    </ScrollLink>
+    <ScrollLink to="about" nav={false} client:load>
+      <Button client:load secondary={true} aria="More about Majic">
+        More about Majic
+      </Button>
+    </ScrollLink>
   </div>
 </section>
