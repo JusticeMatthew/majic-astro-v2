@@ -4,6 +4,7 @@ import { ScrollObserver } from 'astro-scroll-observer';
 import { AstroFont } from 'astro-font';
 import Header from '@/components/Header.astro';
 import GradientBG from '@/components/GradientBG.astro';
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <html
@@ -13,6 +14,7 @@ import GradientBG from '@/components/GradientBG.astro';
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="/favicon.ico?" />
+    <link rel="canonical" href={canonicalURL} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta
@@ -47,10 +49,6 @@ import GradientBG from '@/components/GradientBG.astro';
           selector: '.astro-font-calistoga',
           fallback: 'serif',
         },
-      ]}
-    />
-    <AstroFont
-      config={[
         {
           name: 'Inter',
           src: [

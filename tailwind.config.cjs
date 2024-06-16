@@ -37,7 +37,7 @@ module.exports = {
         logo: ['var(--step-1)', 'var(--fine)'],
         min: 'var(--step-00)',
         bread: 'var(--step-0)',
-        subTitle: 'var(--step-1)',
+        subtitle: 'var(--step-1)',
         title: 'var(--step-5)',
         headline: 'var(--step-6)',
       },

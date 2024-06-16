@@ -5,6 +5,7 @@ import lottie from 'astro-integration-lottie';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://majic-astro-v2.vercel.app/',
   vite: {
     build: {
       sourcemap: true,
