@@ -5,6 +5,31 @@ import ScrollLink from '@/components/ScrollLink.jsx';
 import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
 ---
 
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from('#content-about', {
+    opacity: 0,
+    x: -75,
+    duration: 1,
+    delay: 0.1,
+    stagger: 0.3,
+    scrollTrigger: { trigger: '#content-about', start: 'bottom bottom' },
+  });
+
+  gsap.from('#content-cta', {
+    opacity: 0,
+    duration: 1,
+    x: -75,
+    stagger: 0.3,
+    delay: 0.2,
+    scrollTrigger: { trigger: '#content-cta', start: 'bottom bottom' },
+  });
+</script>
+
 <section id="about" class="mb-section mt-5x w-full">
   <div
     class="container mb-16 flex flex-col-reverse justify-between gap-2x tablet:flex-row"
