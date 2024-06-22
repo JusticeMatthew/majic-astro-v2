@@ -7,7 +7,7 @@ import benefits from '@/constants/benefits';
   class="container relative z-20 mt-20 grid w-screen grid-cols-3 p-0"
 >
   {
-    benefits[0].map(({ maskId, title, content, top }) => (
+    benefits[0].map(({ maskId, title, content }) => (
       <div
         id={maskId}
         class="mask z-50 col-span-1 w-full bg-light-purple pl-6 text-dark-purple"
@@ -23,7 +23,7 @@ import benefits from '@/constants/benefits';
     ))
   }
   {
-    benefits[1].map(({ maskId, title, content, top }) => (
+    benefits[1].map(({ maskId, title, content }) => (
       <div
         id={maskId}
         class="mask2 z-50 col-span-1 w-full bg-light-purple pl-6 text-dark-purple"
