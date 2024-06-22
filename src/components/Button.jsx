@@ -4,7 +4,6 @@ export default function Button({
   contact = false,
   aria,
   children,
-  margin = '',
   ...props
 }) {
   return (
@@ -13,7 +12,7 @@ export default function Button({
       aria-label={aria}
       className={`${
         secondary ? 'font-medium text-light' : 'bg-primary-gradient text-light'
-      } ${margin} group relative cursor-pointer rounded-lg drop-shadow-xl transition-all duration-75 disabled:pointer-events-none disabled:opacity-50`}
+      } group relative cursor-pointer rounded-lg drop-shadow-xl transition-all duration-75 disabled:pointer-events-none disabled:opacity-50`}
       {...props}
     >
       <div
