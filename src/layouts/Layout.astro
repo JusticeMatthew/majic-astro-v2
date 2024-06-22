@@ -25,6 +25,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       name="keyword"
       content="web design, website, development, video editing, creative, business, branding, marketing, apps"
     />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="Majic Web Design" />
     <meta property="og:title" content="Majic Web Design" />
     <meta
       property="og:description"
@@ -33,6 +36,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:image" content="/images/og-logo-v2.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="twitter:title" content="Majic Web Design" />
+    <meta
+      property="twitter:description"
+      content="Majic Web Design is an affordable custom web design and development studio based in Central Florida."
+    />
+    <meta property="twitter:image" content="/images/og-logo-v2.png" />
+    <meta property="twitter:url" content={canonicalURL} />
     <title>Dev | Majic Web Design</title>
     <ScrollObserver />
     <AstroFont
