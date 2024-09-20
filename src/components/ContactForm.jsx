@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import { actions } from 'astro:actions';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -18,33 +18,23 @@ export default function ContactForm() {
   const [sent, setSent] = useState(false);
 
   const sendEmail = async ({ name, email, company, message }) => {
-    try {
-      setSending(true);
-      const validatedForm = contactFormValidator.parse({
-        name,
-        email,
-        company,
-        message,
-      });
-      await emailjs.send(
-        import.meta.env.PUBLIC_EMAILJS_SERVICE,
-        import.meta.env.PUBLIC_EMAILJS_TEMPLATE,
-        validatedForm,
-        import.meta.env.PUBLIC_EMAILJS_USER,
-      );
-      reset();
+    setSending(true);
+    const validatedForm = contactFormValidator.parse({
+      name,
+      email,
+      company,
+      message,
+    });
+    const { data, error } = await actions.sendEmail(validatedForm);
+
+    if (!error) {
       setSending(false);
-      setSent(true);
-      setTimeout(() => setSent(false), 4000);
-    } catch (error) {
-      if (error instanceof z.ZodError) {
-        setSending(false);
-        setError('name', { message: error.message });
-        setError('email', { message: error.message });
-        setError('message', { message: error.message });
-      } else {
-        console.log(error);
-      }
+      console.log(data);
+    } else if (error instanceof z.ZodError) {
+      setSending(false);
+      setError('name', { message: error.message });
+      setError('email', { message: error.message });
+      setError('message', { message: error.message });
     }
   };
 
