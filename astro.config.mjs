@@ -3,6 +3,8 @@ import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
 import lottie from 'astro-integration-lottie';
 import vercel from '@astrojs/vercel/serverless';
+import solidJs from '@astrojs/solid-js';
+import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,7 +15,18 @@ export default defineConfig({
     },
   },
 
-  integrations: [tailwind(), react(), lottie()],
+  integrations: [
+    tailwind(),
+    react(),
+    lottie(),
+    solidJs({
+      include: ['**/solid/*'],
+    }),
+    icon(),
+  ],
   output: 'hybrid',
   adapter: vercel(),
+  experimental: {
+    serverIslands: true,
+  },
 });

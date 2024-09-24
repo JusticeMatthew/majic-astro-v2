@@ -1,8 +1,7 @@
 const navLinks = [
-  ['about', 'About Us'],
+  ['', 'Home'],
   ['services', 'Services'],
-  ['examples', 'Our Work'],
-  ['contact', 'Contact'],
+  ['projects', 'Our Work'],
 ];
 
 export default navLinks;

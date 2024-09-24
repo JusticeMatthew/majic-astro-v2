@@ -45,21 +45,21 @@ import LottieAnimation from 'astro-integration-lottie/Lottie.astro';
       </h3>
       <p
         id="content-about"
-        class="pretty mb-12 mt-6 max-w-[50ch] text-light-gray"
+        class="pretty relative mb-12 mt-6 max-w-[50ch] text-light-gray"
       >
         That&apos;s why Majic wants to provide a one-stop shop for businesses
         who need worry free web design & development services at a fair rate.
       </p>
       <div id="content-about">
         <ScrollLink nav={false} to="services" client:visible>
-          <Button client:visible aria="See our affordable pricing max-w-min">
+          <Button client:visible aria="See our affordable pricing">
             See our affordable pricing
           </Button>
         </ScrollLink>
       </div>
     </div>
     <div class="w-full max-w-[40rem] translate-y-4 max-tablet:mx-auto">
-      <LottieAnimation src="animations/workingV2.json" autoplay="visible" />
+      <LottieAnimation src="/animations/workingV2.json" autoplay="visible" />
     </div>
   </div>
   <Benefits />

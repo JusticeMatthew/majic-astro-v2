@@ -1,8 +1,10 @@
 ---
 import '@/styles/global.css';
+import { ViewTransitions } from 'astro:transitions';
 import { ScrollObserver } from 'astro-scroll-observer';
 import { AstroFont } from 'astro-font';
 import Header from '@/components/Header.astro';
+import Footer from '@/sections/Footer.astro';
 import GradientBG from '@/components/GradientBG.astro';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -44,8 +46,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="twitter:image" content="/images/og-logo-v2.png" />
     <meta property="twitter:url" content={canonicalURL} />
     <title>Dev | Majic Web Design</title>
+    <ViewTransitions />
     <script
       defer
+      data-astro-rerun
       src="https://cloud.umami.is/script.js"
       data-website-id="622c2360-ccf5-4f42-beba-73e57a5c830d"></script>
     <ScrollObserver />
@@ -81,19 +85,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         },
       ]}
     />
-    <script>
-      import Lenis from 'lenis';
-
-      const lenis = new Lenis();
-
-      function raf(time: number) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-
-      requestAnimationFrame(raf);
-    </script></head
-  >
+  </head>
 
   <body>
     <GradientBG />
@@ -101,5 +93,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <main class="max-lg:overflow-x-clip">
       <slot />
     </main>
+    <Footer />
   </body>
 </html>

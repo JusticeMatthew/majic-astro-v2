@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 import ScrollLink from '@/components/ScrollLink.jsx';
 import Packages from '@/components/Packages.astro';
 ---
@@ -23,17 +24,27 @@ import Packages from '@/components/Packages.astro';
     class="flex w-full flex-col items-center justify-center rounded-lg bg-[#94ADFF] p-16 text-center text-dark-purple selection:bg-dark-purple selection:text-light"
   >
     <h2 class="font-cursive text-title">Need something more specific?</h2>
-    <p class="pretty mb-8 mt-6 max-w-[55ch] font-medium">
-      Contact us now for a personalized quote and discover our wide array of
-      services, from 3D modeling to logo design and beyond.
+    <p class="pretty mb-8 mt-6 max-w-[65ch] font-medium">
+      Get in touch for a personalized quote or check out our services page to
+      see everything we offer, from 3D modeling to logo design and beyond!
     </p>
-    <ScrollLink nav={false} to="contact" client:visible>
-      <button
-        aria-label="Get in touch"
-        class="cursor-pointer rounded-lg bg-dark-purple px-huge py-5 text-subtitle text-light drop-shadow-xl transition-all duration-75 hover:bg-dark-purple/80"
-      >
-        <strong class="flashing-text px-huge">Contact us</strong>
-      </button>
-    </ScrollLink>
+    <div class="flex gap-6">
+      <a href="/contact">
+        <button
+          aria-label="Get in touch"
+          class="cursor-pointer rounded-lg bg-dark-purple px-huge py-5 text-subtitle text-light drop-shadow-xl transition-all duration-75 hover:bg-dark"
+        >
+          <strong class="flashing-text px-huge">Contact us</strong>
+        </button>
+      </a>
+      <a href="/services">
+        <button
+          aria-label="Get in touch"
+          class="cursor-pointer rounded-lg bg-dark-purple/75 px-huge py-5 text-subtitle text-light/90 drop-shadow-xl transition-all duration-75 hover:bg-dark"
+        >
+          <p class="px-small">See all services</p>
+        </button>
+      </a>
+    </div>
   </div>
 </section>

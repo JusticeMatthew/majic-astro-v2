@@ -4,8 +4,8 @@ import Landing from '@/sections/Landing.astro';
 import About from '@/sections/About.astro';
 import Examples from '@/sections/Examples.astro';
 import Contact from '@/sections/Contact.astro';
-import Footer from '@/sections/Footer.astro';
 import Services from '@/sections/Services.astro';
+import AuditBanner from '@/components/AuditBanner.astro';
 ---
 
 <Layout>
@@ -14,5 +14,5 @@ import Services from '@/sections/Services.astro';
   <Services />
   <Examples />
   <Contact />
-  <Footer />
+  <AuditBanner server:defer />
 </Layout>

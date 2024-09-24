@@ -1,7 +1,9 @@
 ---
-import ScrollLink from './ScrollLink';
-import navLinks from '@/constants/navLinks';
-import MobileNav from './MobileNav';
+import navLinks from '@/constants/navLinks.js';
+import MobileNav from './MobileNav.jsx';
+import Button from './Button.jsx';
+
+const activeLink = Astro.url.pathname;
 ---
 
 <header
@@ -25,14 +27,20 @@ import MobileNav from './MobileNav';
       </h1>
     </a>
     <MobileNav client:visible />
-    <nav class="hidden gap-2xs sm:flex">
+    <nav class="hidden gap-4 sm:flex" transition:name="nav">
       {
         navLinks.map((link) => (
-          <ScrollLink to={link[0]} client:load nav={true}>
+          <a
+            href={link[0] === '' ? '/' : link[0]}
+            class={`${activeLink == '/' + link[0] ? 'bg-[length:100%_6px] bg-bottom' : ''} cursor-pointer rounded-lg bg-secondary-gradient bg-[length:100%_0%] bg-bottom bg-no-repeat px-3 py-2 text-lg transition-[background-size] hover:bg-[length:100%_100%] hover:text-light`}
+          >
             {link[1]}
-          </ScrollLink>
+          </a>
         ))
       }
+      <a href="/contact">
+        <Button client:load header={true} aria="Contact us">Contact Us</Button>
+      </a>
     </nav>
   </div>
 </header>
