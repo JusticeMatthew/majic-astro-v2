@@ -1,59 +1,33 @@
-<section
-  id="examples"
-  class="container mb-section w-full flex-col justify-center text-light transition-opacity duration-200"
->
-  <p class="mb-16 font-cursive text-4xl sm:text-6xl">Our latest client</p>
-  <p class="mb-8 font-medium tracking-wider max-sm:text-sm">B&C Pest Control</p>
-  <div
-    class="relative flex w-full flex-col items-start tablet:flex-row tablet:items-center"
-  >
-    <p>example</p>
-    <!-- <video
-      autoplay
-      playsinline
-      loop
-      muted
-      poster="/images/bcpc-poster.webp"
-      class="mb-8 inline max-h-[30rem] rounded-lg bg-transparent shadow sm:mb-16 tablet:max-h-[25.4rem]"
-    >
-      <source src="/videos/bcpc-example.webm" type="video/webm" />
-    </video> -->
-    <div class="relative tablet:ml-24">
-      <p class="max-w-[25ch] font-cursive text-3xl sm:text-4xl">
-        A <span class="text-gradient">striking</span> new website for
-        Florida&apos;s finest pest control service
-      </p>
-      <span
-        class="text-gradient absolute -translate-x-10 translate-y-2 font-cursive text-[8rem] leading-none opacity-10"
-      >
-        &quot;
-      </span>
-      <p class="sm:text-tablet mt-8 max-w-[75ch] text-min opacity-75">
-        Majic created the website for our company B&C Pest Control. We told them
-        we wanted something simple and informative and they delivered better
-        than we expected. We would highly recommend Majic for website design,
-        especially for companies looking for someone with a creative eye and
-        affordable pricing.
-      </p>
-      <div class="mb-16 mt-8 flex w-full items-end justify-between">
-        <p class="text-tablet">
-          Garry & JJ Reese
-          <span class="block text-sm opacity-75">Owners</span>
-        </p>
-        <a
-          href="https://www.bandcpestcontrol.com/"
-          target="_blank"
-          class="inline-flex h-10 text-xs font-light tracking-wider opacity-75 hover:opacity-100"
-        >
-          Visit
-          <img
-            src="/icons/right-arrow-icon.svg"
-            alt=""
-            width={10}
-            height={10}
-            class="mb-6 ml-2 translate-y-1"
-          />
-        </a>
+---
+import examples from '@/constants/examples.ts';
+---
+
+<section class="relative mb-section w-screen bg-dark-purple py-40">
+  <div id="examples" class="container relative">
+    <h3 class="pretty mb-6 font-cursive text-headline">
+      Showcasing the results of our clients
+    </h3>
+    <p class="pretty mb-16 mt-6 max-w-[60ch] text-light-gray">
+      Take a look at some of the recent projects we've crafted for our clients.
+      Each one is a reflection of our commitment to quality and attention to
+      detail. Reach out today and let Majic bring your vision to life.
+    </p>
+    <div id="grid" class="grid grid-cols-3 gap-6">
+      {
+        examples.map(({ title, subtitle, content, styles, site }) => (
+          <a
+            href={site}
+            style={styles}
+            class="rounded-lg bg-opacity-50 bg-cover bg-top px-10 py-8 [&:nth-child(2)]:col-span-2 [&:nth-child(3)]:col-span-2">
+            <p class="font-cursive text-midtitle">{title}</p>
+            <p class="mb-52 text-subtitle">{subtitle}</p>
+            <p class="pretty max-w-[55ch] drop-shadow-md">{content}</p>
+          </a>
+        ))
+      }
+      <div
+        class="flex h-full flex-col items-center rounded-lg bg-light p-8 text-dark">
+        <p class="font-cursive text-three">Reach out now!</p>
       </div>
     </div>
   </div>

@@ -100,6 +100,7 @@ body {
   transition-property: all !important;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
   transition-duration: 300ms !important;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -114,13 +115,13 @@ label {
 header {
   max-width: clamp(16rem, 100%, 94rem);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
 }
 
 .container {
   max-width: clamp(16rem, 100%, 90rem);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
 }
 
 #benefits {
@@ -211,27 +212,6 @@ header {
 
 .nowrap {
   text-wrap: nowrap;
-}
-
-html.lenis,
-html.lenis body {
-  height: auto;
-}
-
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-
-.lenis.lenis-scrolling iframe {
-  pointer-events: none;
 }
 
 html[data-is-top='true'] #header {

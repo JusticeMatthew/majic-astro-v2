@@ -6,8 +6,7 @@ import Packages from '@/components/Packages.astro';
 
 <section
   id="services"
-  class="container relative mb-section flex flex-col justify-center"
->
+  class="container relative mb-section flex flex-col justify-center">
   <h3 id="content-cta" class="relative z-10 mb-6 font-cursive text-headline">
     Let's cast a spell of <span class="flashing-text drop-shadow-xl"
       >success</span
@@ -21,28 +20,27 @@ import Packages from '@/components/Packages.astro';
   <p id="content-cta" class="mb-16 mt-6 block font-bold">We take care of it.</p>
   <Packages />
   <div
-    class="flex w-full flex-col items-center justify-center rounded-lg bg-[#94ADFF] p-16 text-center text-dark-purple selection:bg-dark-purple selection:text-light"
-  >
-    <h2 class="font-cursive text-title">Need something more specific?</h2>
+    class="flex w-full flex-col items-center justify-center rounded-lg bg-[#94ADFF] p-16 text-center text-dark-purple selection:bg-dark-purple selection:text-light">
+    <h2 class="balanced font-cursive text-title">
+      Need something more specific?
+    </h2>
     <p class="pretty mb-8 mt-6 max-w-[65ch] font-medium">
       Get in touch for a personalized quote or check out our services page to
       see everything we offer, from 3D modeling to logo design and beyond!
     </p>
-    <div class="flex gap-6">
+    <div class="flex gap-6 max-sm:flex-col">
       <a href="/contact">
         <button
           aria-label="Get in touch"
-          class="cursor-pointer rounded-lg bg-dark-purple px-huge py-5 text-subtitle text-light drop-shadow-xl transition-all duration-75 hover:bg-dark"
-        >
+          class="cursor-pointer rounded-lg bg-dark-purple py-5 text-subtitle text-light drop-shadow-xl transition-all duration-75 hover:bg-dark">
           <strong class="flashing-text px-huge">Contact us</strong>
         </button>
       </a>
       <a href="/services">
         <button
           aria-label="Get in touch"
-          class="cursor-pointer rounded-lg bg-dark-purple/75 px-huge py-5 text-subtitle text-light/90 drop-shadow-xl transition-all duration-75 hover:bg-dark"
-        >
-          <p class="px-small">See all services</p>
+          class="cursor-pointer rounded-lg bg-dark-purple/75 py-5 text-subtitle text-light/90 drop-shadow-xl transition-all duration-75 hover:bg-dark">
+          <p class="px-huge">All services</p>
         </button>
       </a>
     </div>

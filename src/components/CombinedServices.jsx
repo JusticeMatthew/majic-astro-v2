@@ -21,16 +21,13 @@ export default function CombinedServices() {
   return (
     <motion.div
       layout
-      className="mt-20 flex flex-col items-center text-dark sm:mt-32 tablet:hidden"
-    >
+      className="mt-20 flex flex-col items-center text-dark sm:mt-32 tablet:hidden">
       <motion.div
         layout
-        className="relative flex h-auto w-full flex-col justify-between rounded-b-2xl bg-light py-16 shadow"
-      >
+        className="relative flex h-auto w-full flex-col justify-between rounded-b-2xl bg-light py-16 shadow">
         <motion.div
           layout
-          className="absolute -top-20 flex h-20 w-full items-center rounded-t-2xl bg-light/60 text-center text-lg"
-        >
+          className="absolute -top-16 flex h-16 w-full items-center rounded-t-2xl bg-light/60 text-center text-lg">
           {['Personal', 'Business', 'Commerce'].map((tabName) => (
             <motion.div
               layout
@@ -40,8 +37,7 @@ export default function CombinedServices() {
               } ${activePlan === personal ? 'rounded-tl-2xl' : ''} ${
                 activePlan === commerce ? 'rounded-tr-2xl' : ''
               }`}
-              onClick={() => handleTabChange(tabName)}
-            >
+              onClick={() => handleTabChange(tabName)}>
               {tabName}
             </motion.div>
           ))}

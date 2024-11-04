@@ -27,7 +27,7 @@ const activeLink = Astro.url.pathname;
       </h1>
     </a>
     <MobileNav client:visible />
-    <nav class="hidden gap-4 sm:flex" transition:name="nav">
+    <nav class="hidden gap-3 sm:flex" transition:name="nav">
       {
         navLinks.map((link) => (
           <a

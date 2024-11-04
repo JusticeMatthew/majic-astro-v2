@@ -41,7 +41,7 @@ export const pricingPlans = [
       'Modern e-commerce platform',
     ],
     price: '$2,000',
-    monthly: '+ $200 per month',
+    monthly: '+ $100 per month',
     lottie: 'animations/commercePlan.json',
   },
 ];
