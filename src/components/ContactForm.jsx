@@ -40,6 +40,7 @@ export default function ContactForm() {
 
   return (
     <form
+      name="contact-react"
       netlify
       onSubmit={handleSubmit(sendEmail)}
       className="flex w-full flex-col text-dark-purple">
