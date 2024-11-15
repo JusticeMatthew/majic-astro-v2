@@ -40,10 +40,10 @@ export default function ContactForm() {
 
   return (
     <form
+      netlify
       onSubmit={handleSubmit(sendEmail)}
-      className="flex w-full flex-col text-dark-purple"
-    >
-      <div className="min-h-96 flex w-full flex-col sm:flex-row sm:gap-16 md:gap-24">
+      className="flex w-full flex-col text-dark-purple">
+      <div className="flex min-h-96 w-full flex-col sm:flex-row sm:gap-16 md:gap-24">
         <div className="mt-16 w-full">
           <div className="form-container">
             <label htmlFor="name" className="form-label">
@@ -64,8 +64,7 @@ export default function ContactForm() {
                 errors.name
                   ? 'visible mt-2 h-5 text-xs text-red-500'
                   : 'invisible'
-              }
-            >
+              }>
               We need to know your name
             </p>
           </div>
@@ -88,8 +87,7 @@ export default function ContactForm() {
                 errors.email
                   ? 'visible mt-2 h-5 text-xs text-red-500'
                   : 'invisible'
-              }
-            >
+              }>
               We need a valid email
             </p>
           </div>
@@ -124,8 +122,7 @@ export default function ContactForm() {
               errors.message
                 ? 'visible mt-2 h-5 text-xs text-red-500'
                 : 'invisible'
-            }
-          >
+            }>
             Let us know how we can help
           </p>
         </div>
@@ -136,15 +133,13 @@ export default function ContactForm() {
           aria="Send"
           secondary={false}
           disabled={errors.name || errors.email || errors.message || sending}
-          contact={true}
-        >
+          contact={true}>
           {sending ? (
             <svg
               className="h-5 w-5 animate-spin text-white"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
-              viewBox="0 0 24 24"
-            >
+              viewBox="0 0 24 24">
               <circle
                 className="opacity-25"
                 cx="12"
