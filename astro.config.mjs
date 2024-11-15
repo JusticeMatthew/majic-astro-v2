@@ -6,6 +6,8 @@ import vercel from '@astrojs/vercel/serverless';
 import solidJs from '@astrojs/solid-js';
 import icon from 'astro-icon';
 
+import netlify from '@astrojs/netlify';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://majic-astro-v2.vercel.app/',
@@ -25,7 +27,7 @@ export default defineConfig({
     icon(),
   ],
   output: 'hybrid',
-  adapter: vercel(),
+  adapter: netlify(),
   experimental: {
     serverIslands: true,
   },
